@@ -125,3 +125,223 @@ header { background: #fff; padding: 20px 0; border-bottom: 1px solid #f0f3f5; po
 .started-page .role-selection-card:hover { border-color: var(--teal); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
 .started-page .role-icon-circle { width: 65px; height: 65px; border-radius: 50%; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
 .started-page .help-text-bottom { margin-top: 80px; font-size: 14px; color: var(--text); }
+
+/* aDashboard */
+/* ============================================================
+   ADMIN DASHBOARD COMPACT & PREMIUM CSS (.admin-dashboard-page)
+   ============================================================ */
+
+.admin-dashboard-page {
+    background-color: #f8fbfb;
+    min-height: 100vh;
+    font-size: 14px; /* পুরো পেজের ডিফল্ট ফন্ট সাইজ কমানো হয়েছে */
+}
+
+.admin-dashboard-page .dashboard-wrapper {
+    display: flex;
+}
+
+/* Sidebar - Compact & Professional */
+.admin-dashboard-page .sidebar {
+    width: 240px; /* সাইডবার চওড়া কমানো হয়েছে */
+    background: #ffffff;
+    border-right: 1px solid #f0f3f5;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+}
+
+.admin-dashboard-page .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+    padding-left: 10px;
+}
+
+.admin-dashboard-page .logo-box-teal {
+    background: var(--teal);
+    color: #fff;
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+}
+
+.admin-dashboard-page .logo-text-admin strong { display: block; font-size: 1rem; font-weight: 800; }
+.admin-dashboard-page .logo-text-admin span { font-size: 0.7rem; color: var(--text); }
+
+.admin-dashboard-page .section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #adb5bd;
+    letter-spacing: 1.2px;
+    display: block;
+    margin: 20px 0 10px 12px;
+}
+
+.admin-dashboard-page .side-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.88rem;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.admin-dashboard-page .side-link:hover { background: #f8f9fa; color: var(--teal); }
+.admin-dashboard-page .side-link.active {
+    background: var(--teal);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 139, 139, 0.15);
+}
+
+.admin-dashboard-page .sidebar-bottom { border-top: 1px solid #f0f3f5; padding-top: 20px; }
+.admin-dashboard-page .admin-profile-box { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding-left: 5px; }
+.admin-dashboard-page .profile-img { width: 35px; height: 35px; background: var(--teal); color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+.admin-dashboard-page .profile-txt strong { display: block; font-size: 0.85rem; }
+.admin-dashboard-page .exit-btn { text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; gap: 10px; padding-left: 10px; transition: 0.2s; }
+.admin-dashboard-page .exit-btn:hover { color: #ef4444; }
+
+/* Main Content Area */
+.admin-dashboard-page .main-content {
+    margin-left: 240px;
+    flex: 1;
+    padding: 30px 40px;
+}
+
+/* Rounded Header Box - ফিক্সড Corner Radius */
+.admin-dashboard-page .dash-header {
+    background: #ffffff;
+    padding: 25px 35px;
+    border-radius: 30px; /* অনেক বেশি রাউন্ডেড এবং সুন্দর করা হয়েছে */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02); /* খুব হালকা শ্যাডো */
+    border: 1px solid #f0f3f5;
+}
+
+.admin-dashboard-page .dash-header h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 2px; letter-spacing: -0.5px; }
+.admin-dashboard-page .dash-header p { color: var(--text); font-size: 0.95rem; }
+
+.admin-dashboard-page .notif-box {
+    position: relative;
+    width: 42px; height: 42px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    border: 1px solid #f0f3f5;
+    cursor: pointer;
+}
+
+.admin-dashboard-page .notif-count {
+    position: absolute;
+    top: -4px; right: -4px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.65rem;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800;
+}
+
+/* Stats Cards - Compact & Smart */
+.admin-dashboard-page .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.admin-dashboard-page .stat-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #f0f3f5;
+    transition: 0.3s;
+}
+
+.admin-dashboard-page .stat-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.02); }
+
+.admin-dashboard-page .stat-icon-box {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.admin-dashboard-page .stat-info h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 2px; color: var(--navy); }
+.admin-dashboard-page .stat-info span { font-size: 0.85rem; color: #64748b; font-weight: 500; display: block; margin-bottom: 8px; }
+.admin-dashboard-page .stat-info small { font-size: 0.75rem; font-weight: 700; }
+
+/* Sections Styling */
+.admin-dashboard-page .dash-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid #f0f3f5;
+    margin-bottom: 30px;
+}
+
+.admin-dashboard-page .dash-section h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #1e293b;
+}
+
+/* Quick Actions - Scaled Down */
+.admin-dashboard-page .actions-flex { display: flex; justify-content: space-between; text-align: center; }
+.admin-dashboard-page .action-circle {
+    width: 55px; height: 55px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    margin: 0 auto 12px;
+}
+.admin-dashboard-page .action-card span { font-size: 0.85rem; font-weight: 700; color: #334155; }
+
+/* Appointments Table - Compact */
+.admin-dashboard-page .apt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.admin-dashboard-page .apt-patient strong { display: block; font-size: 0.95rem; color: #0f172a; }
+.admin-dashboard-page .apt-patient small { font-size: 0.8rem; color: #64748b; }
+.admin-dashboard-page .apt-time { font-size: 0.85rem; font-weight: 600; color: #334155; }
+.admin-dashboard-page .apt-status {
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 100px;
+    text-align: center;
+}
+
+.admin-dashboard-page .completed { background-color: #dcfce7; color: #15803d; }
+.admin-dashboard-page .progress { background-color: #fef9c3; color: #a16207; }
+.admin-dashboard-page .scheduled { background-color: #e0eaff; color: #1d4ed8; }
+
+/* Scrollbar Styling for a pro feel */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #bbb; }
