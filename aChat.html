@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counselor Chat | Admin Portal</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page chat-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Admin Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+                    <div class="nav-section">
+                        <span class="section-label">OVERVIEW</span>
+                        <a href="aDashboard.html" class="side-link"><i class="fa-solid fa-grid-horizontal"></i> Dashboard</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">MANAGEMENT</span>
+                        <a href="aDoctors.html" class="side-link"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+                        <a href="#" class="side-link"><i class="fa-solid fa-users"></i> Patients</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">COMMUNICATION</span>
+                        <a href="aChat.html" class="side-link active"><i class="fa-solid fa-comment-dots"></i> Chat</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">FINANCIAL</span>
+                        <a href="#" class="side-link"><i class="fa-solid fa-wallet"></i> Payment</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">SUPPORT</span>
+                        <a href="#" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+                        <a href="#" class="side-link"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="admin-profile-box">
+                    <div class="profile-img">RA</div>
+                    <div class="profile-txt"><strong>Rohana Akter</strong><span>Admin</span></div>
+                </div>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="dash-header">
+                <div class="header-left-info">
+                    
+                    <div class="header-text">
+                        <h1>Counselor Chat</h1>
+                        <p>Communicate with counselors in real-time</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notif-box">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notif-count">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CHAT INTERFACE LAYOUT -->
+            <div class="chat-container-layout">
+                
+                <!-- Left: Contacts Sidebar -->
+                <div class="chat-contacts-sidebar">
+                    <div class="chat-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search counselors...">
+                    </div>
+                    
+                    <div class="contacts-list">
+                        <!-- Active Contact -->
+                        <div class="contact-item active">
+                            <div class="contact-avatar bg-teal-accent">JP</div>
+                            <div class="contact-info">
+                                <div class="name-row">
+                                    <strong>Jennifer Parker</strong>
+                                    <span class="unread-badge">2</span>
+                                </div>
+                                <span>Senior Counselor</span>
+                                <p>Will review the case tomorrow</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact 2 -->
+                        <div class="contact-item">
+                            <div class="contact-avatar bg-mint">DK</div>
+                            <div class="contact-info">
+                                <strong>David Kim</strong>
+                                <span>Mental Health Counselor</span>
+                                <p>Student needs urgent support</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact 3 -->
+                        <div class="contact-item">
+                            <div class="contact-avatar bg-purple-light">MG</div>
+                            <div class="contact-info">
+                                <div class="name-row">
+                                    <strong>Maria Garcia</strong>
+                                    <span class="unread-badge">1</span>
+                                </div>
+                                <span>Wellness Coordinator</span>
+                                <p>Thanks for the update</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Chat Window -->
+                <div class="chat-main-window">
+                    <div class="chat-window-header">
+                        <div class="contact-avatar-sm bg-teal-accent">JP</div>
+                        <div class="active-contact-title">
+                            <h3>Jennifer Parker</h3>
+                            <span>Senior Counselor</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages-area">
+                        <!-- Received Message -->
+                        <div class="message-row received">
+                            <div class="message-bubble">
+                                Hi, I reviewed the patient files you sent.
+                            </div>
+                            <span class="msg-time">10:30 AM</span>
+                        </div>
+
+                        <!-- Sent Message -->
+                        <div class="message-row sent">
+                            <div class="message-bubble">
+                                Great! What do you think about Sarah Johnson's case?
+                            </div>
+                            <span class="msg-time">10:32 AM</span>
+                        </div>
+
+                        <!-- Received Message -->
+                        <div class="message-row received">
+                            <div class="message-bubble">
+                                She seems to be recovering well. I recommend a follow-up next week.
+                            </div>
+                            <span class="msg-time">10:35 AM</span>
+                        </div>
+
+                        <!-- Sent Message -->
+                        <div class="message-row sent">
+                            <div class="message-bubble">
+                                Perfect, I'll schedule that.
+                            </div>
+                            <span class="msg-time">10:36 AM</span>
+                        </div>
+
+                        <!-- Received Message -->
+                        <div class="message-row received">
+                            <div class="message-bubble">
+                                Will review the case tomorrow
+                            </div>
+                            <span class="msg-time">10:40 AM</span>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div class="chat-input-footer">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Type a message...">
+                            <button class="btn-send-msg"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
