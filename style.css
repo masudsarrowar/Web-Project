@@ -508,3 +508,213 @@ header { background: #fff; padding: 20px 0; border-bottom: 1px solid #f0f3f5; po
     color: #adb5bd;
     font-weight: 500;
 }
+
+/* ============================================================
+   ADMIN DOCTORS PAGE & MODAL CSS (.doctors-page)
+   Append this to the bottom of your style.css
+   ============================================================ */
+
+/* Page Specific Scoping */
+.doctors-page .header-left-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.doctors-page .back-icon {
+    width: 35px; height: 35px;
+    border: 1px solid #f0f3f5;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--navy);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.doctors-page .back-icon:hover { background: #f8f9fa; }
+
+/* Table Container Section */
+.doctors-page .table-container-section {
+    background: #fff;
+    border-radius: 30px;
+    padding: 30px;
+    border: 1px solid #f0f3f5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.doctors-page .table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.doctors-page .table-toolbar h2 { font-size: 1.15rem; font-weight: 800; color: var(--navy); }
+
+.doctors-page .toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.doctors-page .btn-add-doctor {
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+    transition: 0.3s;
+}
+.doctors-page .btn-add-doctor:hover { background: #007a7a; transform: translateY(-2px); }
+
+.doctors-page .search-wrapper { position: relative; }
+.doctors-page .search-wrapper i {
+    position: absolute;
+    left: 15px; top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+}
+.doctors-page .search-wrapper input {
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    padding: 10px 15px 10px 40px;
+    border-radius: 12px;
+    width: 280px;
+    outline: none;
+    font-size: 0.88rem;
+}
+
+.doctors-page .btn-filter {
+    background: #fff;
+    border: 1px solid #eee;
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Table Design */
+.doctors-page .doctors-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.doctors-page .doctors-table th {
+    text-align: left;
+    padding: 18px 10px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #adb5bd;
+    border-bottom: 1px solid #f8f9fa;
+    letter-spacing: 0.5px;
+}
+
+.doctors-page .doctors-table td {
+    padding: 20px 10px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 0.9rem;
+}
+
+.doctors-page .td-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.doctors-page .avatar-sm {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 800;
+}
+
+.doctors-page .badge-status {
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex; align-items: center; gap: 8px;
+}
+.doctors-page .badge-status.active { background: #dcfce7; color: #15803d; }
+.doctors-page .view-link { color: var(--teal); font-weight: 700; text-decoration: none; }
+
+.doctors-page .table-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #adb5bd;
+    font-weight: 600;
+}
+
+/* =========================================
+   ADD DOCTOR MODAL DESIGN (PIN TO PIN)
+   ========================================= */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 16, 27, 0.4); /* হালকা ডার্ক ওভারলে */
+    display: none; align-items: center; justify-content: center;
+    z-index: 2000;
+}
+.modal-overlay.active { display: flex; }
+
+.modal-content {
+    background: #fff; width: 100%; max-width: 680px;
+    padding: 40px; border-radius: 30px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+    position: relative; animation: modalFadeUp 0.4s ease;
+}
+
+@keyframes modalFadeUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 35px;
+}
+.modal-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--navy); margin-bottom: 5px; }
+.modal-header p { color: var(--text); font-size: 0.95rem; }
+
+.close-modal {
+    background: none; border: none; font-size: 2rem; color: #adb5bd;
+    cursor: pointer; transition: 0.3s;
+}
+.close-modal:hover { color: #ef4444; }
+
+/* Form Elements */
+.form-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+.form-group { margin-bottom: 22px; }
+.form-group.full-width { grid-column: span 2; }
+
+.form-group label {
+    display: block; font-size: 0.9rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 10px;
+}
+.form-group input, .form-group select {
+    width: 100%; padding: 14px 20px; border: 1.5px solid #e8edf2;
+    background: #fcfdfe; border-radius: 12px;
+    font-size: 0.95rem; outline: none; transition: 0.3s;
+    color: #0f172a;
+}
+.form-group input:focus { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(0, 139, 139, 0.05); }
+
+/* Form Footer */
+.form-footer {
+    display: flex; justify-content: flex-end; gap: 15px; margin-top: 30px;
+}
+.btn-cancel {
+    padding: 12px 30px; border-radius: 12px; border: 1px solid #e2e8f0;
+    background: #fff; font-weight: 700; color: #64748b; cursor: pointer; transition: 0.3s;
+}
+.btn-submit {
+    padding: 12px 30px; border-radius: 12px; border: none;
+    background: var(--teal); color: #fff; font-weight: 700;
+    cursor: pointer; transition: 0.3s;
+}
+.btn-submit:hover { background: #007a7a; box-shadow: 0 8px 20px rgba(0, 139, 139, 0.2); }
