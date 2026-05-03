@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Information | Admin Portal</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page doctors-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR (Consistent with Dashboard) -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Admin Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+                    <div class="nav-section">
+                        <span class="section-label">OVERVIEW</span>
+                        <a href="aDashboard.html" class="side-link"><i class="fa-solid fa-grid-horizontal"></i> Dashboard</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">MANAGEMENT</span>
+                        <a href="aDoctors.html" class="side-link active"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+                        <a href="#" class="side-link"><i class="fa-solid fa-users"></i> Patients</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">COMMUNICATION</span>
+                        <a href="#" class="side-link"><i class="fa-solid fa-comment-dots"></i> Chat</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">FINANCIAL</span>
+                        <a href="#" class="side-link"><i class="fa-solid fa-wallet"></i> Payment</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">SUPPORT</span>
+                        <a href="#" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+                        <a href="#" class="side-link"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="admin-profile-box">
+                    <div class="profile-img">RA</div>
+                    <div class="profile-txt">
+                        <strong>Rohana Akter</strong>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Header Section -->
+            <header class="page-header-box">
+                <div class="header-left-info">
+                    <a href="aDashboard.html" class="back-icon"><i class="fa-solid fa-chevron-left"></i></a>
+                    <div class="header-text">
+                        <h1>Doctor Information</h1>
+                        <p>Manage all registered doctors</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Table Container -->
+            <section class="table-container-section">
+                <div class="table-toolbar">
+                    <h2>All Doctors</h2>
+                    <div class="toolbar-actions">
+                        <button class="btn-add-doctor"><i class="fa-solid fa-plus"></i> Add Doctor</button>
+                        <div class="search-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search by name or university ID...">
+                        </div>
+                        <button class="btn-filter"><i class="fa-solid fa-sliders"></i></button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="doctors-table">
+                        <thead>
+                            <tr>
+                                <th>DOCTOR NAME</th>
+                                <th>DOCTOR ID</th>
+                                <th>SPECIALIZATION</th>
+                                <th>PHONE</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-sm bg-blue-light">DRS</div>
+                                        <div class="user-info">
+                                            <strong>Dr. Robert Smith</strong>
+                                            <span>MD, MBBS</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>D001</td>
+                                <td>General Physician</td>
+                                <td>+1 234 111 0001</td>
+                                <td><span class="badge-status active">Active <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><a href="#" class="view-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-sm bg-mint">DLA</div>
+                                        <div class="user-info">
+                                            <strong>Dr. Lisa Anderson</strong>
+                                            <span>MD, Psychiatry</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>D002</td>
+                                <td>Mental Health</td>
+                                <td>+1 234 111 0002</td>
+                                <td><span class="badge-status active">Active <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><a href="#" class="view-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-sm bg-teal-soft">DAH</div>
+                                        <div class="user-info">
+                                            <strong>Dr. Ahmed Hassan</strong>
+                                            <span>MD, Cardiology</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>D003</td>
+                                <td>Cardiology</td>
+                                <td>+1 234 111 0003</td>
+                                <td><span class="badge-status inactive">Inactive <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><a href="#" class="view-link">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <span>Showing 3 of 3 doctors</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

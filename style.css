@@ -345,3 +345,166 @@ header { background: #fff; padding: 20px 0; border-bottom: 1px solid #f0f3f5; po
 ::-webkit-scrollbar-track { background: #f1f1f1; }
 ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #bbb; }
+
+/* ============================================================
+   ADMIN DOCTORS PAGE CSS (.doctors-page)
+   ============================================================ */
+
+.doctors-page .page-header-box {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 25px; /* Dashboard Header এর মতো Consistent */
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 1px solid #f0f3f5;
+}
+
+.doctors-page .header-left-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.doctors-page .back-icon {
+    width: 35px; height: 35px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--navy);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.doctors-page .back-icon:hover { background: #f8f9fa; }
+
+.doctors-page .header-text h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 2px; }
+.doctors-page .header-text p { font-size: 0.9rem; color: var(--text); }
+
+/* Table Section Styling */
+.doctors-page .table-container-section {
+    background: #fff;
+    border-radius: 30px;
+    padding: 30px;
+    border: 1px solid #f0f3f5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.doctors-page .table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.doctors-page .table-toolbar h2 { font-size: 1.1rem; font-weight: 800; color: var(--navy); }
+
+.doctors-page .toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.doctors-page .btn-add-doctor {
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+}
+
+.doctors-page .search-wrapper {
+    position: relative;
+}
+.doctors-page .search-wrapper i {
+    position: absolute;
+    left: 15px; top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+.doctors-page .search-wrapper input {
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    padding: 10px 15px 10px 40px;
+    border-radius: 10px;
+    width: 280px;
+    outline: none;
+    font-size: 0.85rem;
+}
+
+.doctors-page .btn-filter {
+    background: #fff;
+    border: 1px solid #eee;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Table Design */
+.doctors-page .doctors-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.doctors-page .doctors-table th {
+    text-align: left;
+    padding: 15px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #adb5bd;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.doctors-page .doctors-table td {
+    padding: 20px 10px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 0.9rem;
+}
+
+.doctors-page .td-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.doctors-page .avatar-sm {
+    width: 38px; height: 38px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 800;
+}
+.doctors-page .bg-teal-soft { background: #d1f7f0; color: var(--teal); }
+
+.doctors-page .user-info strong { display: block; font-size: 0.95rem; color: var(--navy); }
+.doctors-page .user-info span { font-size: 0.75rem; color: var(--text); }
+
+/* Status Badges */
+.doctors-page .badge-status {
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-flex; align-items: center; gap: 8px;
+}
+.doctors-page .badge-status.active { background: #dcfce7; color: #15803d; }
+.doctors-page .badge-status.inactive { background: #f1f5f9; color: #64748b; }
+
+.doctors-page .view-link {
+    color: var(--teal);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.doctors-page .table-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #adb5bd;
+    font-weight: 500;
+}
