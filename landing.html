@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Pro | University Health Management</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing-page">
+
+    <!-- Navbar -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <div class="logo-box"><i class="fa-solid fa-heart"></i></div>
+                <div class="logo-text">
+                    <strong>Healthcare Pro</strong>
+                    <span>University Health Management</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#features">Features</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="started.html" class="btn-teal-nav">Get Started</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <div class="badge-pill-mint"><i class="fa-solid fa-bolt-lightning"></i> Modern Healthcare Solution</div>
+                <h1>University Health <br><span class="teal-text">Management System</span></h1>
+                <p class="hero-desc">Complete digital healthcare solution for university medical centers. Manage appointments, prescriptions, emergency contacts, and health records all in one place.</p>
+                <div class="hero-btns">
+                    <a href="started.html" class="btn-teal-fill"><i class="fa-solid fa-heart"></i> Access Portal</a>
+                    <button class="btn-chat-outline" onclick="toggleChat()"><i class="fa-regular fa-comment-dots"></i> Chat with Us</button>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="icon-circle bg-mint"><i class="fa-solid fa-users"></i></div>
+                        <div><small>Serving</small><br><strong>5000+ Students</strong></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="icon-circle bg-blue-light"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div><small>Expert</small><br><strong>12+ Doctors</strong></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="icon-circle bg-green-light"><i class="fa-solid fa-clock"></i></div>
+                        <div><small>Available</small><br><strong>24/7 Support</strong></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="outer-blue-ring">
+                    <div class="profile-card">
+                        <div class="avatar-blue">FA</div>
+                        <h2>Fatema Ahmed</h2>
+                        <span class="role-tag">Student Portal</span>
+                        <div class="card-row row-mint"><span><i class="fa-regular fa-calendar"></i> Next Visit</span> <strong>Jan 25</strong></div>
+                        <div class="card-row row-blue"><span><i class="fa-regular fa-file-lines"></i> Records</span> <strong>12 Files</strong></div>
+                        <div class="card-row row-purple"><span><i class="fa-solid fa-bolt"></i> Status</span> <strong class="text-purple">Active</strong></div>
+                    </div>
+                </div>
+                <div class="hero-floating-btns">
+                    <button class="f-btn-solid"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button>
+                    <button class="f-btn-white" onclick="toggleChat()"><i class="fa-regular fa-comment"></i> Chat Support</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title-center">
+                <span class="pill-badge">Our Services</span>
+                <h2>Comprehensive Healthcare Solutions</h2>
+                <p>Everything you need for complete health management in one integrated platform</p>
+            </div>
+            <div class="services-grid">
+                <div class="s-card">
+                    <div class="s-icon bg-mint"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Medical Consultation</h3>
+                    <p>Get expert medical advice from qualified doctors. Schedule appointments and receive guidance.</p>
+                    <ul class="check-list mint">
+                        <li><i class="fa-solid fa-circle-check"></i> Qualified Doctors</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Easy Appointment Booking</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Follow-up Care</li>
+                    </ul>
+                </div>
+                <div class="s-card">
+                    <div class="s-icon bg-blue-light"><i class="fa-regular fa-file-lines"></i></div>
+                    <h3>Prescription Management</h3>
+                    <p>Access and manage all your prescriptions digitally. View history, download, and track medications.</p>
+                    <ul class="check-list blue">
+                        <li><i class="fa-solid fa-circle-check"></i> Digital Prescriptions</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Complete History</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Download & Print</li>
+                    </ul>
+                </div>
+                <div class="s-card">
+                    <div class="s-icon bg-red-light"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Emergency Support</h3>
+                    <p>24/7 emergency assistance when you need it most. Quick access to emergency contacts and support.</p>
+                    <ul class="check-list red">
+                        <li><i class="fa-solid fa-circle-check"></i> 24/7 Availability</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Quick Response</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Emergency Contacts</li>
+                    </ul>
+                </div>
+                <div class="s-card">
+                    <div class="s-icon bg-purple-light"><i class="fa-solid fa-capsules"></i></div>
+                    <h3>Medication Tracking</h3>
+                    <p>Track your medications, dosages, and schedules. Never miss a dose with smart reminders.</p>
+                    <ul class="check-list purple">
+                        <li><i class="fa-solid fa-circle-check"></i> Dosage Information</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Schedule Tracking</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Usage Instructions</li>
+                    </ul>
+                </div>
+                <div class="s-card">
+                    <div class="s-icon bg-mint"><i class="fa-solid fa-wave-square"></i></div>
+                    <h3>Health Records</h3>
+                    <p>Maintain complete digital health records. Access your medical history anytime, anywhere.</p>
+                    <ul class="check-list mint">
+                        <li><i class="fa-solid fa-circle-check"></i> Secure Storage</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Easy Access</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Complete History</li>
+                    </ul>
+                </div>
+                <div class="s-card">
+                    <div class="s-icon bg-orange-light"><i class="fa-solid fa-comment-dots"></i></div>
+                    <h3>Chat Support</h3>
+                    <p>Connect with healthcare professionals through secure messaging. Get answers to your health questions.</p>
+                    <ul class="check-list orange">
+                        <li><i class="fa-solid fa-circle-check"></i> Secure Messaging</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Quick Response</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Expert Guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY FEATURES SECTION -->
+    <section id="features" class="features bg-light-section">
+        <div class="container">
+            <div class="section-title-center">
+                <span class="pill-badge">Key Features</span>
+                <h2>Why Choose Healthcare Pro?</h2>
+                <p>Designed specifically for university health centers with modern features and security.</p>
+            </div>
+            <div class="features-grid">
+                <div class="f-card">
+                    <div class="f-icon bg-mint"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="f-txt"><h4>Secure & Private</h4><p>Your health data is encrypted and stored securely following industry protocols.</p></div>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon bg-blue-light"><i class="fa-solid fa-users-gear"></i></div>
+                    <div class="f-txt"><h4>Multi-User System</h4><p>Separate portals for students, doctors, and administrators with tailored access.</p></div>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon bg-purple-light"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="f-txt"><h4>Real-Time Updates</h4><p>Get instant notifications for appointments, prescriptions and health updates.</p></div>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon bg-green-light"><i class="fa-regular fa-file-pdf"></i></div>
+                    <div class="f-txt"><h4>Paperless System</h4><p>Go digital with electronic prescriptions, records and reports. Eco-friendly management.</p></div>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon bg-orange-light"><i class="fa-regular fa-comment"></i></div>
+                    <div class="f-txt"><h4>AI Chatbot Support</h4><p>Get instant answers with our intelligent chatbot 24/7 to assist you anytime.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-title-center">
+                <span class="pill-badge">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our health management system</p>
+            </div>
+            <div class="faq-accordion">
+                <details><summary>How do I book an appointment at the university health center? <i class="fa-solid fa-chevron-down"></i></summary><p>You can book through the student portal after logging in.</p></details>
+                <details><summary>What services are available at the health center? <i class="fa-solid fa-chevron-down"></i></summary><p>We provide consultations, prescriptions, and emergency support.</p></details>
+                <details><summary>Are the medical services free for students? <i class="fa-solid fa-chevron-down"></i></summary><p>Yes, university health services are covered for enrolled students.</p></details>
+                <details><summary>What should I do in case of a medical emergency? <i class="fa-solid fa-chevron-down"></i></summary><p>Contact our 24/7 hotline immediately.</p></details>
+                <details><summary>Can I access my prescription history online? <i class="fa-solid fa-chevron-down"></i></summary><p>Yes, all records are stored in your digital portal.</p></details>
+                <details><summary>What are the health center operating hours? <i class="fa-solid fa-chevron-down"></i></summary><p>9:00 AM - 5:00 PM, Sunday to Thursday.</p></details>
+                
+                <div class="still-questions-box">
+                    <h3>Still have questions?</h3>
+                    <p>Can't find the answer? Please chat with our support team.</p>
+                    <button class="btn-teal-fill" onclick="toggleChat()"><i class="fa-solid fa-comment"></i> Chat with Support</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container footer-flex">
+            <div class="footer-left">
+                <h2>Get in Touch</h2>
+                <p>Have questions? Our team is here to help 24/7.</p>
+                <div class="c-line"><div class="c-icon-circle"><i class="fa-solid fa-phone"></i></div><div><strong>Emergency Hotline</strong><br>+880 1700 000 000</div></div>
+                <div class="c-line"><div class="c-icon-circle"><i class="fa-solid fa-envelope"></i></div><div><strong>Email Support</strong><br>healthcenter@uiu.ac.bd</div></div>
+                <div class="c-line"><div class="c-icon-circle"><i class="fa-solid fa-location-dot"></i></div><div><strong>Location</strong><br>United International University, Dhaka</div></div>
+            </div>
+            <div class="footer-right">
+                <div class="access-box">
+                    <h3>Quick Access</h3>
+                    <a href="started.html" class="box-btn active"><i class="fa-solid fa-users"></i> Access Your Portal</a>
+                    <button class="box-btn" onclick="toggleChat()">Chat with Support</button>
+                    <div class="footer-logo-brand"><i class="fa-solid fa-heart"></i> <strong>Healthcare Pro</strong></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar container">© 2026 Healthcare Pro - University Health Management System.</div>
+    </footer>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header"><span>Support</span><button onclick="toggleChat()">&times;</button></div>
+        <div class="chat-body"><p>Hello! How can we help you today?</p></div>
+        <div class="chat-footer"><input type="text" placeholder="Type here..."><button><i class="fa-solid fa-paper-plane"></i></button></div>
+    </div>
+    <div class="fab-chat" onclick="toggleChat()"><i class="fa-solid fa-comment-dots"></i></div>
+
+    <script>function toggleChat(){document.getElementById('chatPopup').classList.toggle('active');}</script>
+</body>
+</html>

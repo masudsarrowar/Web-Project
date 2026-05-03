@@ -1,0 +1,127 @@
+/* =========================================
+   1. ROOT & GLOBAL RESET
+   ========================================= */
+:root {
+    --teal: #008b8b;
+    --navy: #01101b;
+    --mint: #e0f7f3;
+    --text: #5e6d77;
+    --blue: #0061ff;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+html { scroll-behavior: smooth; }
+body { color: var(--navy); line-height: 1.6; background: #fff; overflow-x: hidden; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 25px; }
+
+/* SHARED UTILS */
+.bg-mint { background: #d1f7f0; color: var(--teal); }
+.bg-blue-light { background: #e1ebff; color: var(--blue); }
+.bg-purple-light { background: #f3e8ff; color: #9333ea; }
+.bg-red-light { background: #fee2e2; color: #ef4444; }
+.bg-green-light { background: #e7f9ed; color: #22c55e; }
+.bg-orange-light { background: #ffedd5; color: #f97316; }
+
+/* HEADER */
+header { background: #fff; padding: 20px 0; border-bottom: 1px solid #f0f3f5; position: sticky; top: 0; z-index: 1000; }
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-box { background: var(--teal); color: #fff; width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.logo-text strong { display: block; font-size: 1.1rem; color: var(--navy); }
+.logo-text span { font-size: 0.75rem; color: var(--text); }
+.nav-links a { text-decoration: none; color: var(--text); margin: 0 18px; font-weight: 500; font-size: 0.95rem; }
+.btn-teal-nav { background: var(--teal); color: #fff; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+/* =========================================
+   2. LANDING PAGE STYLES (.landing-page)
+   ========================================= */
+.landing-page .hero { padding: 100px 0; background: linear-gradient(135deg, #f8fbfa 0%, #ffffff 100%); }
+.landing-page .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+.landing-page .badge-pill-mint { background: var(--mint); color: var(--teal); padding: 8px 18px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; margin-bottom: 25px; display: inline-block; }
+.landing-page h1 { font-size: 3.8rem; line-height: 1.1; font-weight: 800; margin-bottom: 25px; letter-spacing: -1px; }
+.landing-page .teal-text { color: var(--teal); }
+.landing-page .hero-desc { font-size: 1.15rem; color: var(--text); margin-bottom: 40px; max-width: 580px; }
+
+.landing-page .hero-btns { display: flex; gap: 15px; margin-bottom: 60px; }
+.landing-page .btn-teal-fill { background: var(--teal); color: #fff; padding: 16px 35px; border-radius: 12px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; border: none; }
+.landing-page .btn-chat-outline { background: #f4f7f9; border: none; padding: 16px 35px; border-radius: 12px; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
+
+/* Hero Ring & Card */
+.landing-page .hero-right { position: relative; display: flex; flex-direction: column; align-items: center; }
+.landing-page .outer-blue-ring { width: 440px; height: 440px; border: 4px solid var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
+.landing-page .profile-card { background: #fff; width: 320px; padding: 40px 30px; border-radius: 35px; box-shadow: 0 30px 60px rgba(0,0,0,0.06); text-align: center; z-index: 5; }
+.landing-page .avatar-blue { width: 70px; height: 70px; background: var(--blue); color: #fff; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; }
+.landing-page .card-role { color: var(--text); font-size: 0.9rem; margin-bottom: 25px; display: block; }
+.landing-page .status-row { display: flex; justify-content: space-between; padding: 14px 20px; border-radius: 18px; margin-top: 12px; font-size: 0.95rem; }
+.landing-page .row-mint { background: #f0fdfa; color: #134e4a; }
+.landing-page .row-blue { background: #eff6ff; color: #1e40af; }
+.landing-page .row-purple { background: #fdf4ff; color: #581c87; }
+.landing-page .text-purple { color: #9333ea; }
+
+.landing-page .hero-floating-btns { display: flex; gap: 15px; margin-top: -35px; z-index: 10; position: relative; }
+.landing-page .f-btn-solid { background-color: var(--teal); color: white; border: none; padding: 16px 28px; border-radius: 15px; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(0, 139, 139, 0.25); }
+.landing-page .f-btn-white { background-color: white; color: var(--navy); border: 1px solid #e8edf2; padding: 16px 28px; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+/* STATS ROW */
+.landing-page .stats-row { display: flex; gap: 45px; margin-top: 40px; }
+.landing-page .stat-item { display: flex; align-items: center; gap: 15px; }
+.landing-page .icon-circle { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+
+/* SERVICES GRID */
+.landing-page .services { padding: 120px 0; }
+.landing-page .section-title-center { text-align: center; margin-bottom: 70px; }
+.landing-page .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; }
+.landing-page .s-card { padding: 35px; background: #fff; border-radius: 25px; border: 1px solid #f8f9fa; transition: 0.4s; height: 100%; display: flex; flex-direction: column; }
+.landing-page .s-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.04); }
+.landing-page .s-icon { width: 65px; height: 65px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 30px; }
+.landing-page .list-check { list-style: none; margin-top: 25px; }
+.landing-page .list-check li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-weight: 600; font-size: 0.95rem; }
+.landing-page .list-check.mint li i { color: var(--teal); }
+.landing-page .list-check.blue li i { color: var(--blue); }
+.landing-page .list-check.red li i { color: #ef4444; }
+.landing-page .list-check.purple li i { color: #9333ea; }
+.landing-page .list-check.orange li i { color: #f97316; }
+
+/* FEATURES GRID */
+.bg-light-section { background-color: #f8fbfb; }
+.landing-page .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.landing-page .f-card { background: #fff; padding: 40px; border-radius: 25px; display: flex; gap: 25px; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.01); }
+.landing-page .f-icon { width: 55px; height: 55px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+
+/* FAQ */
+.landing-page .faq { padding: 120px 0; }
+.landing-page .faq-accordion { max-width: 850px; margin: 0 auto; }
+.landing-page details { background: #fff; border: 1px solid #f0f3f5; border-radius: 20px; margin-bottom: 20px; padding: 25px; cursor: pointer; }
+.landing-page summary { font-weight: 700; font-size: 1.15rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
+.landing-page .still-questions-box { background: var(--mint); padding: 50px; border-radius: 30px; text-align: center; margin-top: 80px; }
+
+/* FOOTER */
+.landing-page footer { background: #01101b; color: #fff; padding: 100px 0 40px; }
+.landing-page .footer-flex { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; }
+.landing-page .c-line { display: flex; align-items: center; gap: 18px; margin-top: 30px; }
+.landing-page .c-icon-circle { width: 50px; height: 50px; background: rgba(0, 139, 139, 0.12); color: var(--teal); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+.landing-page .access-panel { background: #081621; padding: 45px; border-radius: 35px; }
+.landing-page .box-btn { width: 100%; padding: 20px; border-radius: 15px; border: none; margin-bottom: 15px; text-align: left; font-weight: 700; display: block; text-decoration: none; color: #000; background: #fff; transition: 0.3s; }
+.landing-page .box-btn.active { background: var(--teal); color: #fff; }
+.landing-page .footer-logo-brand { margin-top: 40px; display: flex; align-items: center; gap: 10px; color: var(--teal); font-size: 1.3rem; }
+
+/* CHAT WIDGET */
+.landing-page .chat-popup { position: fixed; bottom: 105px; right: 30px; width: 330px; background: #fff; border-radius: 25px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); display: none; flex-direction: column; z-index: 1100; overflow: hidden; }
+.landing-page .chat-popup.active { display: flex; }
+.landing-page .chat-header { background: var(--teal); color: #fff; padding: 18px 25px; display: flex; justify-content: space-between; align-items: center; }
+.landing-page .fab-chat { position: fixed; bottom: 30px; right: 30px; background: var(--teal); width: 68px; height: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.8rem; cursor: pointer; box-shadow: 0 10px 30px rgba(0, 139, 139, 0.35); z-index: 1101; }
+
+/* =========================================
+   3. STARTED PAGE STYLES (.started-page)
+   ========================================= */
+.started-page { background: #f9fbfc; min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; }
+.started-page .started-container-box { background: #fff; width: 100%; max-width: 1100px; padding: 80px 50px; text-align: center; position: relative; }
+.started-page .back-home-link { position: absolute; top: 40px; left: 40px; text-decoration: none; color: var(--text); font-weight: 600; display: flex; align-items: center; gap: 8px; font-size: 15px; }
+.started-page .logo-box-mint { background: var(--teal); color: #fff; width: 65px; height: 65px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 30px; box-shadow: 0 10px 25px rgba(0, 139, 139, 0.15); }
+.started-page h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; }
+.started-page .selection-grid-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+.started-page .role-selection-card { background: #fff; padding: 55px 35px; border-radius: 25px; border: 1.5px solid #f0f3f5; text-decoration: none; color: inherit; transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+.started-page .role-selection-card:hover { border-color: var(--teal); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+.started-page .role-icon-circle { width: 65px; height: 65px; border-radius: 50%; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
+.started-page .help-text-bottom { margin-top: 80px; font-size: 14px; color: var(--text); }
