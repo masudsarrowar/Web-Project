@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients Information | Admin Portal</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- doctors-page ক্লাসটি যোগ করা হয়েছে যাতে টেবিল লেআউট ঠিক থাকে -->
+<body class="admin-dashboard-page doctors-page patients-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Admin Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+                    <div class="nav-section">
+                        <span class="section-label">OVERVIEW</span>
+                        <a href="aDashboard.html" class="side-link"><i class="fa-solid fa-grid-horizontal"></i> Dashboard</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">MANAGEMENT</span>
+                        <a href="aDoctors.html" class="side-link"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+                        <a href="aPatient.html" class="side-link active"><i class="fa-solid fa-users"></i> Patients</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">COMMUNICATION</span>
+                        <a href="#" class="side-link"><i class="fa-solid fa-comment-dots"></i> Chat</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">FINANCIAL</span>
+                        <a href="#" class="side-link"><i class="fa-solid fa-wallet"></i> Payment</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">SUPPORT</span>
+                        <a href="#" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+                        <a href="#" class="side-link"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="admin-profile-box">
+                    <div class="profile-img">RA</div>
+                    <div class="profile-txt">
+                        <strong>Rohana Akter</strong>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Header Section -->
+            <header class="dash-header doctors-header-box">
+                <div class="header-left-info">
+                    <a href="aDashboard.html" class="back-icon"><i class="fa-solid fa-arrow-left"></i></a>
+                    <div class="header-text">
+                        <h1>User Information</h1>
+                        <p>Manage system users and access</p>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="notif-box">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notif-count">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Table Container -->
+            <section class="table-container-section">
+                <div class="table-toolbar">
+                    <h2>My Patients</h2>
+                    <div class="toolbar-actions">
+                        <div class="search-wrapper search-wide">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search by name or university ID...">
+                        </div>
+                        <button class="btn-filter-icon"><i class="fa-solid fa-filter"></i></button>
+                        <button class="btn-add-doctor"><i class="fa-solid fa-plus"></i> Add New User</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="doctors-table patients-table">
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>University ID</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Blood Group</th>
+                                <th>Last Visit</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1 -->
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-circle bg-teal-solid">MS</div>
+                                        <div class="user-info">
+                                            <strong>Masud Sarrowar</strong>
+                                            <span>masud.sarrowar@bscse.uiu.ac.bd</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>011213099</td>
+                                <td>21</td>
+                                <td>Male</td>
+                                <td>A+</td>
+                                <td>2026-04-05</td>
+                                <td><span class="badge-status-box badge-prescribed">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><button class="btn-view-outline">View</button></td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-circle bg-purple-solid">SR</div>
+                                        <div class="user-info">
+                                            <strong>Shahanur Rahman Bappy</strong>
+                                            <span>shahanur.bappy@bscse.uiu.ac.bd</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>011211002</td>
+                                <td>23</td>
+                                <td>Male</td>
+                                <td>O+</td>
+                                <td>2026-04-04</td>
+                                <td><span class="badge-status-box badge-prescribed">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><button class="btn-view-outline">View</button></td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-circle bg-blue-solid">RC</div>
+                                        <div class="user-info">
+                                            <strong>Rohana Chowdhury</strong>
+                                            <span>rohana.chowdhury@bscse.uiu.ac.bd</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>011215043</td>
+                                <td>20</td>
+                                <td>Female</td>
+                                <td>B+</td>
+                                <td>2026-04-03</td>
+                                <td><span class="badge-status-box badge-not-prescribed">Not Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><button class="btn-view-outline">View</button></td>
+                            </tr>
+                            <!-- Row 4 -->
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-circle bg-green-solid">AS</div>
+                                        <div class="user-info">
+                                            <strong>Adrita Srawoshi</strong>
+                                            <span>adrita.srawoshi@bscse.uiu.ac.bd</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>1217088</td>
+                                <td>22</td>
+                                <td>Female</td>
+                                <td>AB+</td>
+                                <td>2026-04-02</td>
+                                <td><span class="badge-status-box badge-prescribed">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><button class="btn-view-outline">View</button></td>
+                            </tr>
+                            <!-- Row 5 -->
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-circle bg-orange-solid">RN</div>
+                                        <div class="user-info">
+                                            <strong>Raisa Nuzhat Utsa</strong>
+                                            <span>raisa.utsa@bscse.uiu.ac.bd</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>011219125</td>
+                                <td>21</td>
+                                <td>Female</td>
+                                <td>O-</td>
+                                <td>2026-04-01</td>
+                                <td><span class="badge-status-box badge-not-prescribed">Not Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><button class="btn-view-outline">View</button></td>
+                            </tr>
+                            <!-- Row 6 -->
+                            <tr>
+                                <td>
+                                    <div class="td-user">
+                                        <div class="avatar-circle bg-pink-solid">AH</div>
+                                        <div class="user-info">
+                                            <strong>Akhter Hossain</strong>
+                                            <span>akhter.hossain@bscse.uiu.ac.bd</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>011212076</td>
+                                <td>24</td>
+                                <td>Male</td>
+                                <td>A-</td>
+                                <td>2026-03-30</td>
+                                <td><span class="badge-status-box badge-prescribed">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><button class="btn-view-outline">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
