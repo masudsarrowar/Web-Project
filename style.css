@@ -1721,3 +1721,170 @@ header {
     background: #f0f3f5;
     border-radius: 10px;
 }
+/* ============================================================
+   ADMIN PATIENTS PAGE & MODAL DESIGN (.patients-page)
+   ============================================================ */
+
+.patients-page .search-wide { width: 350px; }
+
+.patients-page .btn-filter-icon {
+    background: #fff;
+    border: 1px solid #e8edf2;
+    width: 45px; height: 45px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #64748b;
+    margin-right: 10px;
+}
+
+.patients-page .btn-view-outline {
+    background: transparent;
+    border: 1px solid #e8edf2;
+    padding: 6px 16px;
+    border-radius: 8px;
+    color: var(--teal);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.patients-page .btn-view-outline:hover { background: #f8fbfa; border-color: var(--teal); }
+
+/* ============================================================
+   ADMIN PATIENTS PAGE DESIGN (FIXED & CONSISTENT)
+   ============================================================ */
+
+/* =========================================
+   1. ROOT VARIABLES & GLOBAL RESET
+   ========================================= */
+:root {
+    --teal: #008b8b;
+    --navy: #01101b;
+    --mint: #e0f7f3;
+    --text: #5e6d77;
+    --blue: #0061ff;
+    --white: #ffffff;
+    --border: #f0f3f5;
+    --bg-light: #f8fbfb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+html { scroll-behavior: smooth; }
+body { color: var(--navy); line-height: 1.6; background: #fff; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 25px; }
+
+/* Global Utilities */
+.bg-mint { background: #d1f7f0; color: var(--teal); }
+.bg-blue-light { background: #e1ebff; color: var(--blue); }
+.bg-purple-light { background: #f3e8ff; color: #9333ea; }
+.bg-red-light { background: #fee2e2; color: #ef4444; }
+
+/* =========================================
+   2. SHARED NAVBAR (Used in Landing Page)
+   ========================================= */
+header { background: #fff; padding: 18px 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo-box { background: var(--teal); color: #fff; width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.logo-text strong { display: block; font-size: 1.1rem; color: var(--navy); }
+.btn-teal-nav { background: var(--teal); color: #fff; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+/* =========================================
+   3. LANDING & STARTED PAGE STYLES
+   ========================================= */
+.landing-page .hero { padding: 100px 0; background: linear-gradient(135deg, #f8fbfa 0%, #ffffff 100%); }
+.landing-page .profile-card { background: #fff; width: 330px; padding: 40px 30px; border-radius: 35px; box-shadow: 0 30px 60px rgba(0,0,0,0.06); text-align: center; }
+
+.started-page { background: #f9fbfc; min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; text-align: center; }
+.started-container-box { background: #fff; width: 100%; max-width: 1100px; padding: 80px 50px; }
+.role-selection-card { background: #fff; padding: 55px 35px; border-radius: 25px; border: 1.5px solid #f0f3f5; text-decoration: none; color: inherit; transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+.role-selection-card:hover { border-color: var(--teal); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+
+/* =========================================
+   4. ADMIN COMMON STYLES (Sidebar & Compact Header)
+   ========================================= */
+.admin-dashboard-page { background-color: var(--bg-light); color: var(--navy); overflow-x: hidden; font-size: 14px; }
+.admin-dashboard-page .dashboard-wrapper { display: flex; min-height: 100vh; }
+
+.sidebar { width: 240px; background: #fff; border-right: 1px solid var(--border); padding: 30px 15px; display: flex; flex-direction: column; justify-content: space-between; position: fixed; height: 100vh; z-index: 100; }
+.side-link { display: flex; align-items: center; gap: 12px; padding: 10px 15px; text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.88rem; border-radius: 10px; transition: 0.2s; }
+.side-link.active { background: var(--teal); color: #fff; box-shadow: 0 4px 12px rgba(0, 139, 139, 0.15); }
+.main-content { margin-left: 240px; flex: 1; padding: 30px 40px; }
+
+/* Admin Header Box - Fixed 30px Corner Radius */
+.dash-header { 
+    display: flex; justify-content: space-between; align-items: center; 
+    margin-bottom: 35px; background: #fff; padding: 25px 35px; border-radius: 30px; 
+    border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.dash-header h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.5px; }
+.notif-box { position: relative; width: 42px; height: 42px; background: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border: 1px solid var(--border); cursor: pointer; }
+.notif-count { position: absolute; top: -4px; right: -4px; background: #ef4444; color: #fff; font-size: 0.65rem; width: 18px; height: 18px; border-radius: 50%; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+
+/* ============================================================
+   5. DOCTORS & PATIENTS SHARED TABLE DESIGN
+   ============================================================ */
+.table-container-section { background: #fff; border-radius: 30px; padding: 30px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+.table-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; gap: 20px; }
+.toolbar-actions { display: flex; align-items: center; gap: 12px; }
+
+.search-wrapper { position: relative; }
+.search-wrapper i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #adb5bd; }
+.search-wrapper input { background: #f8fafc; border: 1px solid #eef2f6; padding: 10px 15px 10px 40px; border-radius: 10px; width: 280px; outline: none; font-size: 0.88rem; }
+
+.btn-add-doctor, .btn-add-teal { background: var(--teal); color: #fff; border: none; padding: 10px 20px; border-radius: 12px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: 0.3s; }
+.btn-filter-icon { background: #fff; border: 1px solid var(--border); width: 40px; height: 40px; border-radius: 10px; color: #64748b; cursor: pointer; }
+
+/* Table Elements (No Squashing) */
+.patients-data-table, .doctors-table { width: 100%; border-collapse: collapse; table-layout: auto; }
+.patients-data-table th, .doctors-table th { text-align: left; padding: 15px 10px; font-size: 0.75rem; font-weight: 800; color: #adb5bd; border-bottom: 1.5px solid #f8f9fa; white-space: nowrap; }
+.patients-data-table td, .doctors-table td { padding: 18px 10px; border-bottom: 1px solid #f8fafc; font-size: 0.9rem; vertical-align: middle; }
+
+.td-user, .td-patient-info { display: flex; align-items: center; gap: 12px; }
+.avatar-sm { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; }
+.user-info strong { display: block; font-size: 0.95rem; color: var(--navy); }
+.user-info span { font-size: 0.8rem; color: var(--text); }
+
+.badge-status, .status-badge { padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.badge-status.active, .status-badge.prescribed { background-color: #dcfce7; color: #15803d; }
+
+.view-btn-compact, .btn-action-view { background: transparent; border: 1px solid #e8edf2; padding: 6px 18px; border-radius: 8px; color: var(--teal); font-weight: 700; cursor: pointer; }
+
+/* ============================================================
+   6. COMPACT MODAL DESIGN (Consistent 35px Radius)
+   ============================================================ */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(1, 16, 27, 0.4); display: none; align-items: center; justify-content: center; z-index: 2000; }
+.modal-overlay.active { display: flex; }
+
+.modal-content {
+    background: #ffffff; width: 680px; padding: 40px 45px; border-radius: 35px; /* Perfect Curve */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15); position: relative; animation: modalSlide 0.3s ease-out;
+}
+@keyframes modalSlide { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.close-modal-icon { position: absolute; top: 30px; right: 30px; background: none; border: none; font-size: 2rem; color: #475569; cursor: pointer; }
+
+.modal-header-text h2 { font-size: 1.6rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+.modal-header-text p { color: var(--text); font-size: 0.95rem; margin-bottom: 35px; }
+
+.compact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
+.form-input { margin-bottom: 22px; }
+.form-input label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+
+/* Consistent Input Styling - Grey Background */
+.form-input input, .form-input select {
+    width: 100%; background-color: #f8fafc; border: 1.5px solid #eef2f6;
+    padding: 14px 20px; border-radius: 12px; font-size: 0.95rem; outline: none; color: var(--navy);
+}
+.form-input input:focus { border-color: var(--teal); background: #fff; }
+
+.custom-select { position: relative; }
+.custom-select i { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #94a3b8; pointer-events: none; }
+.custom-select select { appearance: none; cursor: pointer; }
+
+.compact-modal-footer { display: flex; justify-content: flex-end; gap: 15px; margin-top: 20px; }
+.btn-grey-cancel { background-color: #f1f5f9; border: none; padding: 14px 35px; border-radius: 12px; font-weight: 700; color: #334155; cursor: pointer; }
+.btn-teal-submit { background-color: var(--teal); border: none; padding: 14px 35px; border-radius: 12px; font-weight: 700; color: #fff; cursor: pointer; }
+
+/* =========================================
+   7. CHAT PAGE STYLES (Isolated)
+   ========================================= */
+.chat-page .chat-container-layout { display: grid; grid-template-columns: 320px 1fr; background: #fff; border-radius: 30px; height: calc(100vh - 220px); border: 1px solid var(--border); overflow: hidden; }

@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- doctors-page ক্লাসটি যোগ করা হয়েছে যাতে টেবিল লেআউট ঠিক থাকে -->
-<body class="admin-dashboard-page doctors-page patients-page">
+<body class="admin-dashboard-page patients-page">
 
     <div class="dashboard-wrapper">
-        <!-- SIDEBAR -->
+        <!-- SIDEBAR (Consistent with Admin Portal) -->
         <aside class="sidebar">
             <div class="sidebar-top">
                 <div class="sidebar-logo">
@@ -33,7 +32,7 @@
                     <div class="nav-section">
                         <span class="section-label">MANAGEMENT</span>
                         <a href="aDoctors.html" class="side-link"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
-                        <a href="aPatient.html" class="side-link active"><i class="fa-solid fa-users"></i> Patients</a>
+                        <a href="aPatients.html" class="side-link active"><i class="fa-solid fa-users"></i> Patients</a>
                     </div>
                     <div class="nav-section">
                         <span class="section-label">COMMUNICATION</span>
@@ -65,16 +64,14 @@
 
         <!-- MAIN CONTENT -->
         <main class="main-content">
-            <!-- Header Section -->
-            <header class="dash-header doctors-header-box">
+            <!-- Header (Consistent 30px Radius) -->
+            <header class="dash-header">
                 <div class="header-left-info">
-                    <a href="aDashboard.html" class="back-icon"><i class="fa-solid fa-arrow-left"></i></a>
                     <div class="header-text">
                         <h1>User Information</h1>
                         <p>Manage system users and access</p>
                     </div>
                 </div>
-                
                 <div class="header-right">
                     <div class="notif-box">
                         <i class="fa-regular fa-bell"></i>
@@ -88,17 +85,20 @@
                 <div class="table-toolbar">
                     <h2>My Patients</h2>
                     <div class="toolbar-actions">
-                        <div class="search-wrapper search-wide">
+                        <div class="search-wrapper">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Search by name or university ID...">
+                            <input type="text" placeholder="Search by name or ID...">
                         </div>
-                        <button class="btn-filter-icon"><i class="fa-solid fa-filter"></i></button>
-                        <button class="btn-add-doctor"><i class="fa-solid fa-plus"></i> Add New User</button>
+                        <button class="btn-filter-icon"><i class="fa-solid fa-sliders"></i></button>
+                        <button class="btn-add-doctor" onclick="document.getElementById('patientModal').classList.add('active')">
+                            <i class="fa-solid fa-plus"></i> Add New User
+                        </button>
                     </div>
                 </div>
 
+                <!-- Fixed Table Layout -->
                 <div class="table-responsive">
-                    <table class="doctors-table patients-table">
+                    <table class="patients-data-table">
                         <thead>
                             <tr>
                                 <th>Patient Name</th>
@@ -112,14 +112,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Row 1 -->
                             <tr>
                                 <td>
                                     <div class="td-user">
-                                        <div class="avatar-circle bg-teal-solid">MS</div>
+                                        <div class="avatar-sm bg-mint">MS</div>
                                         <div class="user-info">
                                             <strong>Masud Sarrowar</strong>
-                                            <span>masud.sarrowar@bscse.uiu.ac.bd</span>
+                                            <span>masud.sarrowar@uiu.ac.bd</span>
                                         </div>
                                     </div>
                                 </td>
@@ -128,109 +127,51 @@
                                 <td>Male</td>
                                 <td>A+</td>
                                 <td>2026-04-05</td>
-                                <td><span class="badge-status-box badge-prescribed">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
-                                <td><button class="btn-view-outline">View</button></td>
-                            </tr>
-                            <!-- Row 2 -->
-                            <tr>
-                                <td>
-                                    <div class="td-user">
-                                        <div class="avatar-circle bg-purple-solid">SR</div>
-                                        <div class="user-info">
-                                            <strong>Shahanur Rahman Bappy</strong>
-                                            <span>shahanur.bappy@bscse.uiu.ac.bd</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>011211002</td>
-                                <td>23</td>
-                                <td>Male</td>
-                                <td>O+</td>
-                                <td>2026-04-04</td>
-                                <td><span class="badge-status-box badge-prescribed">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
-                                <td><button class="btn-view-outline">View</button></td>
-                            </tr>
-                            <!-- Row 3 -->
-                            <tr>
-                                <td>
-                                    <div class="td-user">
-                                        <div class="avatar-circle bg-blue-solid">RC</div>
-                                        <div class="user-info">
-                                            <strong>Rohana Chowdhury</strong>
-                                            <span>rohana.chowdhury@bscse.uiu.ac.bd</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>011215043</td>
-                                <td>20</td>
-                                <td>Female</td>
-                                <td>B+</td>
-                                <td>2026-04-03</td>
-                                <td><span class="badge-status-box badge-not-prescribed">Not Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
-                                <td><button class="btn-view-outline">View</button></td>
-                            </tr>
-                            <!-- Row 4 -->
-                            <tr>
-                                <td>
-                                    <div class="td-user">
-                                        <div class="avatar-circle bg-green-solid">AS</div>
-                                        <div class="user-info">
-                                            <strong>Adrita Srawoshi</strong>
-                                            <span>adrita.srawoshi@bscse.uiu.ac.bd</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>1217088</td>
-                                <td>22</td>
-                                <td>Female</td>
-                                <td>AB+</td>
-                                <td>2026-04-02</td>
-                                <td><span class="badge-status-box badge-prescribed">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
-                                <td><button class="btn-view-outline">View</button></td>
-                            </tr>
-                            <!-- Row 5 -->
-                            <tr>
-                                <td>
-                                    <div class="td-user">
-                                        <div class="avatar-circle bg-orange-solid">RN</div>
-                                        <div class="user-info">
-                                            <strong>Raisa Nuzhat Utsa</strong>
-                                            <span>raisa.utsa@bscse.uiu.ac.bd</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>011219125</td>
-                                <td>21</td>
-                                <td>Female</td>
-                                <td>O-</td>
-                                <td>2026-04-01</td>
-                                <td><span class="badge-status-box badge-not-prescribed">Not Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
-                                <td><button class="btn-view-outline">View</button></td>
-                            </tr>
-                            <!-- Row 6 -->
-                            <tr>
-                                <td>
-                                    <div class="td-user">
-                                        <div class="avatar-circle bg-pink-solid">AH</div>
-                                        <div class="user-info">
-                                            <strong>Akhter Hossain</strong>
-                                            <span>akhter.hossain@bscse.uiu.ac.bd</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>011212076</td>
-                                <td>24</td>
-                                <td>Male</td>
-                                <td>A-</td>
-                                <td>2026-03-30</td>
-                                <td><span class="badge-status-box badge-prescribed">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
-                                <td><button class="btn-view-outline">View</button></td>
+                                <td><span class="badge-status active">Prescribed <i class="fa-solid fa-chevron-down"></i></span></td>
+                                <td><button class="btn-view-link">View</button></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
         </main>
+    </div>
+
+    <!-- MODAL (Add Patient) - Consistent with Doctors Modal -->
+    <div class="modal-overlay" id="patientModal">
+        <div class="modal-content">
+            <button class="close-modal-icon" onclick="document.getElementById('patientModal').classList.remove('active')">&times;</button>
+            <div class="modal-header-text">
+                <h2>Add New Patient</h2>
+                <p>Fill in the patient information to admit them to the system</p>
+            </div>
+            <form class="compact-modal-form">
+                <div class="compact-grid">
+                    <div class="form-input"><label>Patient Name *</label><input type="text" placeholder="Enter patient name"></div>
+                    <div class="form-input"><label>Patient Email *</label><input type="email" placeholder="patient@example.com"></div>
+                    <div class="form-input"><label>University ID</label><input type="text" placeholder="011213099"></div>
+                    <div class="form-input"><label>Age *</label><input type="text" placeholder="25"></div>
+                    <div class="form-input">
+                        <label>Gender *</label>
+                        <div class="custom-select">
+                            <select><option>Select gender</option><option>Male</option><option>Female</option></select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <label>Blood Group *</label>
+                        <div class="custom-select">
+                            <select><option>Select blood group</option><option>A+</option><option>B+</option></select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="compact-modal-footer">
+                    <button type="button" class="btn-grey-cancel" onclick="document.getElementById('patientModal').classList.remove('active')">Cancel</button>
+                    <button type="button" class="btn-teal-submit">Add Patient</button>
+                </div>
+            </form>
+        </div>
     </div>
 
 </body>
