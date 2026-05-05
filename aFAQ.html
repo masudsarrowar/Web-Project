@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Admin Portal</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page faq-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR (Consistent with Admin Portal) -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Admin Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+                    <div class="nav-section">
+                        <span class="section-label">OVERVIEW</span>
+                        <a href="aDashboard.html" class="side-link"><i class="fa-solid fa-grid-horizontal"></i> Dashboard</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">MANAGEMENT</span>
+                        <a href="aDoctors.html" class="side-link"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+                        <a href="aPatients.html" class="side-link"><i class="fa-solid fa-users"></i> Patients</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">COMMUNICATION</span>
+                        <a href="aChat.html" class="side-link"><i class="fa-solid fa-comment-dots"></i> Chat</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">FINANCIAL</span>
+                        <a href="aPayments.html" class="side-link"><i class="fa-solid fa-wallet"></i> Payment</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">SUPPORT</span>
+                        <a href="aEmergency.html" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+                        <a href="aFAQ.html" class="side-link active"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="admin-profile-box">
+                    <div class="profile-img">RA</div>
+                    <div class="profile-txt"><strong>Rohana Akter</strong><span>Admin</span></div>
+                </div>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <!-- Header Consistent with Dashboard (30px radius) -->
+            <header class="dash-header">
+                <div class="header-left-info">
+                    <div class="header-text">
+                        <div class="faq-header-title">
+                            <div class="icon-q-box"><i class="fa-solid fa-circle-question"></i></div>
+                            <div>
+                                <h1>Frequently Asked Questions</h1>
+                                <p>Find answers to common questions about Healthcare Pro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notif-box">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notif-count">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- FAQ Container Card -->
+            <div class="dash-section faq-main-card">
+                <div class="faq-card-header">
+                    <h2>Common Questions</h2>
+                    <p>Browse through our most frequently asked questions below</p>
+                </div>
+
+                <div class="faq-list">
+                    <!-- FAQ Item 1 -->
+                    <details class="faq-item">
+                        <summary>How do I schedule an appointment? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            <p>You can schedule an appointment through the patient portal or by contacting our reception desk at +1 234 567 8900. Appointments are available Monday-Friday, 9 AM to 5 PM.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 2 -->
+                    <details class="faq-item">
+                        <summary>What services does Healthcare Pro offer? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            <p>Healthcare Pro provides comprehensive medical services including general consultations, specialized treatments, emergency support, and digital health record management.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 3 -->
+                    <details class="faq-item">
+                        <summary>Are consultations confidential? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            <p>Yes, all consultations and medical records are strictly confidential and follow industry-standard security protocols to protect your privacy.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 4 -->
+                    <details class="faq-item">
+                        <summary>What are the consultation fees? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            <p>Consultation fees vary depending on the department and specialist. You can view the fee structure in the Payment Management section of your portal.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 5 -->
+                    <details class="faq-item">
+                        <summary>How can I access my medical records? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            <p>Medical records can be accessed 24/7 through the "Patients" section in the Admin Portal or via the Student/Patient Portal using your login credentials.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 6 -->
+                    <details class="faq-item">
+                        <summary>What should I do in case of emergency? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            <p>In case of a medical emergency, please call our 24/7 emergency hotline at 999 or visit the "Emergency" section in the portal for nearest hospital details.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Still have questions box -->
+                <div class="still-questions-help-box">
+                    <h3>Still have questions?</h3>
+                    <p>If you couldn't find the answer you're looking for, please contact our support team.</p>
+                    <div class="contact-support-details">
+                        <span><strong>Email:</strong> support@mindcare.edu</span>
+                        <span><strong>Phone:</strong> +1 234 567 8900</span>
+                        <span><strong>Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

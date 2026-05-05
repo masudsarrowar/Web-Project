@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Support | Admin Portal</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page emergency-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR (Consistent with Admin Portal) -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Admin Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+                    <div class="nav-section">
+                        <span class="section-label">OVERVIEW</span>
+                        <a href="aDashboard.html" class="side-link"><i class="fa-solid fa-grid-horizontal"></i> Dashboard</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">MANAGEMENT</span>
+                        <a href="aDoctors.html" class="side-link"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+                        <a href="aPatients.html" class="side-link"><i class="fa-solid fa-users"></i> Patients</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">COMMUNICATION</span>
+                        <a href="aChat.html" class="side-link"><i class="fa-solid fa-comment-dots"></i> Chat</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">FINANCIAL</span>
+                        <a href="aPayments.html" class="side-link"><i class="fa-solid fa-wallet"></i> Payment</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">SUPPORT</span>
+                        <a href="aEmergency.html" class="side-link active"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+                        <a href="aFAQ.html" class="side-link"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="admin-profile-box">
+                    <div class="profile-img">RA</div>
+                    <div class="profile-txt"><strong>Rohana Akter</strong><span>Admin</span></div>
+                </div>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <!-- Header Consistent with Dashboard (30px radius) -->
+            <header class="dash-header">
+                <div class="header-left-info">
+                    <div class="header-text">
+                        <h1>Emergency</h1>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notif-box">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notif-count">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Emergency Hotlines -->
+            <section class="emergency-section">
+                <div class="section-header-mini">
+                    <h3>Emergency Hotlines</h3>
+                    <p>Call immediately in case of emergency</p>
+                </div>
+                <div class="hotline-grid">
+                    <div class="hotline-card">
+                        <div class="hot-icon bg-red-solid"><i class="fa-solid fa-phone-volume"></i></div>
+                        <strong>National Emergency</strong>
+                        <h3>999</h3>
+                        <span>Police, Fire & Ambulance</span>
+                    </div>
+                    <div class="hotline-card">
+                        <div class="hot-icon bg-orange-solid"><i class="fa-solid fa-truck-medical"></i></div>
+                        <strong>Ambulance</strong>
+                        <h3>199</h3>
+                        <span>Emergency Ambulance</span>
+                    </div>
+                    <div class="hotline-card">
+                        <div class="hot-icon bg-purple-solid"><i class="fa-solid fa-brain"></i></div>
+                        <strong>Mental Health</strong>
+                        <h3>01779-554391</h3>
+                        <span>Kaan Pete Roi</span>
+                    </div>
+                    <div class="hotline-card">
+                        <div class="hot-icon bg-pink-solid"><i class="fa-solid fa-shield-heart"></i></div>
+                        <strong>Suicide Prevention</strong>
+                        <h3>09638-133133</h3>
+                        <span>Moner Bondhu</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Response Protocol -->
+            <section class="dash-section protocol-container">
+                <div class="section-header-mini">
+                    <h3>Emergency Response Protocol</h3>
+                    <p>Follow these steps to handle medical emergencies effectively</p>
+                </div>
+                <div class="protocol-grid">
+                    <div class="step-card">
+                        <div class="step-head">
+                            <div class="step-icon bg-blue-light"><i class="fa-solid fa-shield-halved"></i></div>
+                            <span class="step-badge">Step 1</span>
+                        </div>
+                        <h4>Stay Calm and Assess</h4>
+                        <p>Take a deep breath. Quickly assess the situation and ensure your own safety first.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-head">
+                            <div class="step-icon bg-red-light"><i class="fa-solid fa-phone-flip"></i></div>
+                            <span class="step-badge">Step 2</span>
+                        </div>
+                        <h4>Call Emergency Services</h4>
+                        <p>Dial 999 for immediate help. Provide clear location and nature of emergency.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-head">
+                            <div class="step-icon bg-green-light"><i class="fa-solid fa-hand-holding-medical"></i></div>
+                            <span class="step-badge">Step 3</span>
+                        </div>
+                        <h4>Provide First Aid</h4>
+                        <p>If trained, provide basic first aid. Do not move the patient unless necessary.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-head">
+                            <div class="step-icon bg-purple-light"><i class="fa-solid fa-hospital"></i></div>
+                            <span class="step-badge">Step 4</span>
+                        </div>
+                        <h4>Contact Nearest Hospital</h4>
+                        <p>Call the nearest hospital from the list below to alert them of incoming emergency.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-head">
+                            <div class="step-icon bg-orange-light"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                            <span class="step-badge">Step 5</span>
+                        </div>
+                        <h4>Document Everything</h4>
+                        <p>Note down time, symptoms, actions taken. This info is crucial for medical staff.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-head">
+                            <div class="step-icon bg-yellow-light"><i class="fa-solid fa-user-doctor"></i></div>
+                            <span class="step-badge">Step 6</span>
+                        </div>
+                        <h4>Follow Up</h4>
+                        <p>After emergency is handled, ensure proper documentation and follow-up care.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nearest Hospitals -->
+            <section class="emergency-section">
+                <div class="section-header-mini">
+                    <h3>Nearest Hospitals</h3>
+                    <p>Contact these hospitals for emergency medical assistance</p>
+                </div>
+                <div class="hospital-grid">
+                    <!-- Hospital 1 -->
+                    <div class="hospital-card">
+                        <div class="hosp-top">
+                            <div class="hosp-icon bg-blue-light"><i class="fa-solid fa-hospital"></i></div>
+                            <div class="hosp-name">
+                                <h4>United Hospital</h4>
+                                <span class="avail-badge"><i class="fa-solid fa-clock"></i> 24/7 Available</span>
+                            </div>
+                            <span class="dist-badge">2.5 km</span>
+                        </div>
+                        <div class="hosp-info">
+                            <p><i class="fa-solid fa-location-dot"></i> Plot 15, Road 71, Gulshan-2, Dhaka 1212</p>
+                            <div class="hosp-phones">
+                                <span><i class="fa-solid fa-phone"></i> 09666 710 110</span>
+                                <span class="text-red"><i class="fa-solid fa-truck-medical"></i> 09666 710 510</span>
+                            </div>
+                        </div>
+                        <div class="hosp-specialties">
+                            <small>Available Specialties:</small>
+                            <div class="pill-row">
+                                <span class="pill">Cardiology</span><span class="pill">Neurology</span><span class="pill">Trauma Care</span>
+                            </div>
+                        </div>
+                        <div class="hosp-btns">
+                            <button class="btn-call">Call Hospital</button>
+                            <button class="btn-amb"><i class="fa-solid fa-truck-medical"></i> Ambulance</button>
+                        </div>
+                    </div>
+
+                    <!-- Hospital 2 -->
+                    <div class="hospital-card">
+                        <div class="hosp-top">
+                            <div class="hosp-icon bg-blue-light"><i class="fa-solid fa-hospital"></i></div>
+                            <div class="hosp-name">
+                                <h4>Apollo Hospitals Dhaka</h4>
+                                <span class="avail-badge"><i class="fa-solid fa-clock"></i> 24/7 Available</span>
+                            </div>
+                            <span class="dist-badge">3.8 km</span>
+                        </div>
+                        <div class="hosp-info">
+                            <p><i class="fa-solid fa-location-dot"></i> Plot 81, Block E, Bashundhara R/A, Dhaka 1229</p>
+                            <div class="hosp-phones">
+                                <span><i class="fa-solid fa-phone"></i> 09610 123 456</span>
+                                <span class="text-red"><i class="fa-solid fa-truck-medical"></i> 10678</span>
+                            </div>
+                        </div>
+                        <div class="hosp-specialties">
+                            <small>Available Specialties:</small>
+                            <div class="pill-row">
+                                <span class="pill">Emergency Medicine</span><span class="pill">ICU</span><span class="pill">Surgery</span>
+                            </div>
+                        </div>
+                        <div class="hosp-btns">
+                            <button class="btn-call">Call Hospital</button>
+                            <button class="btn-amb"><i class="fa-solid fa-truck-medical"></i> Ambulance</button>
+                        </div>
+                    </div>
+                    <!-- Row 2 can be added similarly -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
