@@ -2208,3 +2208,120 @@ header { background: #fff; padding: 18px 0; border-bottom: 1px solid var(--borde
     color: var(--teal);
     text-decoration: none;
 }
+
+/* ============================================================
+   ADMIN NOTIFICATION PAGE
+   ============================================================ */
+.notif-box { position: relative; } /* এটি নিশ্চিত করুন */
+
+.notif-dropdown {
+    position: absolute; top: 55px; right: 0; width: 300px;
+    background: #fff; border-radius: 20px; border: 1px solid #f0f3f5;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); display: none;
+    flex-direction: column; z-index: 3000; overflow: hidden; cursor: default;
+}
+.notif-dropdown.active { display: flex; animation: slideDownNotif 0.3s ease; }
+
+@keyframes slideDownNotif { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+.notif-header { padding: 15px 20px; border-bottom: 1px solid #f8f9fa; display: flex; justify-content: space-between; align-items: center; }
+.notif-header h3 { font-size: 0.9rem; font-weight: 800; color: var(--navy); }
+.mark-read { background: none; border: none; font-size: 0.7rem; color: var(--teal); font-weight: 700; cursor: pointer; }
+.notif-list { max-height: 300px; overflow-y: auto; }
+.notif-item { display: flex; gap: 12px; padding: 15px 20px; border-bottom: 1px solid #f8f9fa; transition: 0.2s; cursor: pointer; }
+.notif-item:hover { background-color: #f8fbfa; }
+.n-icon { width: 35px; height: 35px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; }
+.n-text p { font-size: 0.8rem; line-height: 1.3; color: var(--navy); margin: 0; }
+.n-text small { font-size: 0.65rem; color: #adb5bd; }
+.notif-footer { padding: 12px; text-align: center; background: #fcfdfe; border-top: 1px solid #f8f9fa; }
+.notif-footer a { font-size: 0.8rem; font-weight: 700; color: var(--navy); text-decoration: none; }
+
+
+
+
+/* ============================================================
+   ADMIN PROFILE PAGE SPECIFIC CSS (.profile-page)
+   ============================================================ */
+
+/* Sidebar Admin Link Fix (No underline, no color change) */
+.sidebar-admin-link-fix {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.profile-page .active-profile-box {
+    background: #f1f5f9;
+    border-radius: 12px;
+}
+
+/* Layout Grid */
+.profile-page .profile-main-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-page .profile-info-row {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+}
+
+/* Card Designs (35px Radius) */
+.profile-page .profile-card-small, 
+.profile-page .profile-card-large, 
+.profile-page .profile-card-full {
+    background: #ffffff;
+    border-radius: 35px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+/* Left Card (Avatar) */
+.profile-page .profile-card-small { text-align: center; }
+.profile-page .p-avatar-circle {
+    width: 110px; height: 110px; background: #f0fdfa; color: var(--teal);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; margin: 0 auto 20px;
+}
+.profile-page .profile-card-small h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 5px; color: var(--navy); }
+.profile-page .profile-card-small span { color: var(--text); font-size: 0.9rem; display: block; margin-bottom: 25px; }
+
+/* Form Components */
+.profile-page h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 30px; color: var(--navy); }
+.profile-page .p-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
+.profile-page .p-field { margin-bottom: 20px; }
+.profile-page .full-width { grid-column: span 2; }
+
+.profile-page label {
+    display: block; font-size: 0.85rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 10px;
+}
+
+/* Grey Background for Inputs (#f8fafc) */
+.profile-page input {
+    width: 100%; background-color: #f8fafc; border: 1.5px solid #eef2f6;
+    padding: 14px 20px; border-radius: 12px; font-size: 0.95rem; outline: none;
+    transition: 0.3s; color: var(--navy);
+}
+.profile-page input:focus { border-color: var(--teal); background: #fff; }
+.profile-page .p-disabled-bg { color: #94a3b8; cursor: not-allowed; }
+
+/* Buttons Styling */
+.profile-page .btn-p-save { background: var(--teal); color: #fff; border: none; padding: 14px 35px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+.profile-page .btn-p-save:hover { background: #007a7a; box-shadow: 0 8px 20px rgba(0, 139, 139, 0.2); }
+
+.profile-page .btn-p-photo { background: #f1f5f9; border: 1px solid #e2e8f0; padding: 10px 25px; border-radius: 10px; font-weight: 700; color: #334155; cursor: pointer; }
+.profile-page .btn-p-white-wide { background: #f1f5f9; border: 1px solid #e2e8f0; padding: 14px 35px; border-radius: 12px; font-weight: 700; color: #334155; cursor: pointer; margin-top: 10px; }
+
+/* System Preferences List */
+.profile-page .p-pref-list { display: flex; flex-direction: column; gap: 15px; }
+.profile-page .p-pref-item {
+    background: #f8fafc; padding: 22px 25px; border-radius: 20px;
+    border: 1px solid #f0f3f5; cursor: pointer; transition: 0.3s;
+    text-align: left;
+}
+.profile-page .p-pref-item:hover { border-color: var(--teal); background: #f0fdfa; }
+.profile-page .p-pref-item strong { display: block; font-size: 1rem; color: var(--navy); margin-bottom: 5px; }
+.profile-page .p-pref-item p { font-size: 0.85rem; color: var(--text); }

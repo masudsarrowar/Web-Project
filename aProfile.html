@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile | Admin Portal</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page profile-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR (Consistent with Admin Portal) -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Admin Portal</span>
+                    </div>
+                </div>
+
+                                <nav class="side-nav">
+                    <div class="nav-section">
+                        <span class="section-label">OVERVIEW</span>
+                        <a href="aDashboard.html" class="side-link"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">MANAGEMENT</span>
+                        <a href="aDoctors.html" class="side-link"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+                        <a href="aPatients.html" class="side-link"><i class="fa-solid fa-users"></i> Patients</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">COMMUNICATION</span>
+                        <a href="aChat.html" class="side-link"><i class="fa-solid fa-comment-dots"></i> Chat</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">FINANCIAL</span>
+                        <a href="aPayments.html" class="side-link"><i class="fa-solid fa-wallet"></i> Payment</a>
+                    </div>
+                    <div class="nav-section">
+                        <span class="section-label">SUPPORT</span>
+                        <a href="aEmergency.html" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+                        <a href="aFAQ.html" class="side-link"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <!-- Admin Profile Trigger - Fixed styling -->
+                <a href="aProfile.html" class="sidebar-admin-link-fix">
+                    <div class="admin-profile-box active-profile-box">
+                        <div class="profile-img">RA</div>
+                        <div class="profile-txt">
+                            <strong>Rohana Akter</strong>
+                            <span>Admin</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <!-- Header Consistent with 30px Radius -->
+            <header class="dash-header">
+                <div class="header-left-info">
+                    <div class="header-text">
+                        <h1>Admin Profile</h1>
+                        <p>Manage your account settings and preferences</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <!-- Notification Bell with Dropdown Logic -->
+                    <div class="notif-box" id="notifBtn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notif-count">3</span>
+                        
+                        <div class="notif-dropdown" id="notifDropdown">
+                            <div class="notif-header">
+                                <h3>Notifications</h3>
+                                <button class="mark-read">Mark all as read</button>
+                            </div>
+                            <div class="notif-list">
+                                <div class="notif-item">
+                                    <div class="n-icon bg-blue-light"><i class="fa-solid fa-calendar-check"></i></div>
+                                    <div class="n-text">
+                                        <p>New appointment with <strong>Sarah Johnson</strong></p>
+                                        <small>5 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notif-footer"><a href="#">See all notifications</a></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- PROFILE CONTENT (PIN TO PIN DESIGN) -->
+            <div class="profile-main-layout">
+                
+                <!-- Row 1: Avatar & Basic Info -->
+                <div class="profile-info-row">
+                    <!-- Left Avatar Card (35px radius) -->
+                    <div class="profile-card-small">
+                        <div class="p-avatar-circle">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h2>Admin User</h2>
+                        <span>System Administrator</span>
+                        <button class="btn-p-photo">Change Photo</button>
+                    </div>
+
+                    <!-- Right Info Card (35px radius) -->
+                    <div class="profile-card-large">
+                        <h3>Profile Information</h3>
+                        <div class="p-form-grid">
+                            <div class="p-field">
+                                <label>First Name</label>
+                                <input type="text" value="John">
+                            </div>
+                            <div class="p-field">
+                                <label>Last Name</label>
+                                <input type="text" value="Admin">
+                            </div>
+                            <div class="p-field full-width">
+                                <label>Email</label>
+                                <input type="email" value="admin@mindcare.edu">
+                            </div>
+                            <div class="p-field full-width">
+                                <label>Phone</label>
+                                <input type="text" value="+1 234 567 8900">
+                            </div>
+                            <div class="p-field full-width">
+                                <label>Role</label>
+                                <input type="text" value="System Administrator" disabled class="p-disabled-bg">
+                            </div>
+                        </div>
+                        <button class="btn-p-save">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- Row 2: Security Settings (35px radius) -->
+                <div class="profile-card-full">
+                    <h3>Security Settings</h3>
+                    <div class="p-form-grid">
+                        <div class="p-field full-width">
+                            <label>Current Password</label>
+                            <input type="password" placeholder="Enter current password">
+                        </div>
+                        <div class="p-field">
+                            <label>New Password</label>
+                            <input type="password" placeholder="Enter new password">
+                        </div>
+                        <div class="p-field">
+                            <label>Confirm Password</label>
+                            <input type="password" placeholder="Confirm new password">
+                        </div>
+                    </div>
+                    <button class="btn-p-white-wide">Update Password</button>
+                </div>
+
+                <!-- Row 3: System Preferences (35px radius) -->
+                <div class="profile-card-full">
+                    <h3>System Preferences</h3>
+                    <div class="p-pref-list">
+                        <div class="p-pref-item">
+                            <div>
+                                <strong>Email Notifications</strong>
+                                <p>Receive email alerts for important events</p>
+                            </div>
+                        </div>
+                        <div class="p-pref-item">
+                            <div>
+                                <strong>Desktop Notifications</strong>
+                                <p>Show notifications on your desktop</p>
+                            </div>
+                        </div>
+                        <div class="p-pref-item">
+                            <div>
+                                <strong>Two-Factor Authentication</strong>
+                                <p>Add an extra layer of security</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- NOTIFICATION SCRIPT -->
+    <script>
+        const notifBtn = document.getElementById('notifBtn');
+        const notifDropdown = document.getElementById('notifDropdown');
+
+        if (notifBtn) {
+            notifBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                notifDropdown.classList.toggle('active');
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (notifDropdown && !notifDropdown.contains(e.target)) {
+                notifDropdown.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

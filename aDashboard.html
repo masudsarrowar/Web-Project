@@ -27,7 +27,7 @@
                 <nav class="side-nav">
                     <div class="nav-section">
                         <span class="section-label">OVERVIEW</span>
-                        <a href="#" class="side-link active"><i class="fa-solid fa-grid-horizontal"></i> Dashboard</a>
+                        <a href="#" class="side-link active"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
                     </div>
                     <div class="nav-section">
                         <span class="section-label">MANAGEMENT</span>
@@ -51,32 +51,62 @@
             </div>
 
             <div class="sidebar-bottom">
-                <div class="admin-profile-box">
-                    <div class="profile-img">RA</div>
-                    <div class="profile-txt">
-                        <strong>Rohana Akter</strong>
-                        <span>Admin</span>
-                    </div>
-                </div>
-                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
-            </div>
+    <!-- div কে a ট্যাগ দিয়ে পরিবর্তন করা হয়েছে এবং href="aProfile.html" যোগ করা হয়েছে -->
+    <a href="aProfile.html" class="admin-profile-box" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;">
+        <div class="profile-img">RA</div>
+        <div class="profile-txt">
+            <strong>Rohana Akter</strong>
+            <span>Admin</span>
+        </div>
+    </a>
+    <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+</div>
         </aside>
 
         <!-- MAIN CONTENT AREA -->
         <main class="main-content">
             <!-- Top Header -->
+            
+
             <header class="dash-header">
-                <div class="header-left">
-                    <h1>Admin Dashboard</h1>
-                    <p>Welcome back. Here's your overview today.</p>
+    <div class="header-left">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome back. Here's your overview today.</p>
+    </div>
+    <div class="header-right">
+        <!-- এখানে id="notifBtn" যোগ করা হয়েছে এবং ভেতরে ড্রপডাউন দেওয়া হয়েছে -->
+        <div class="notif-box" id="notifBtn">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-count">3</span>
+
+            <!-- Notification Dropdown Start -->
+            <div class="notif-dropdown" id="notifDropdown">
+                <div class="notif-header">
+                    <h3>Notifications</h3>
+                    <button class="mark-read">Mark all as read</button>
                 </div>
-                <div class="header-right">
-                    <div class="notif-box">
-                        <i class="fa-regular fa-bell"></i>
-                        <span class="notif-count">3</span>
+                <div class="notif-list">
+                    <div class="notif-item">
+                        <div class="n-icon bg-blue-light"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div class="n-text">
+                            <p>New appointment with <strong>Sarah Johnson</strong></p>
+                            <small>5 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="notif-item">
+                        <div class="n-icon bg-mint"><i class="fa-solid fa-user-plus"></i></div>
+                        <div class="n-text">
+                            <p><strong>Dr. Robert</strong> added a new prescription</p>
+                            <small>1 hour ago</small>
+                        </div>
                     </div>
                 </div>
-            </header>
+                <div class="notif-footer"><a href="#">See all notifications</a></div>
+            </div>
+            <!-- Notification Dropdown End -->
+        </div>
+    </div>
+</header>
 
             <!-- Stats Grid (7 Cards) -->
             <div class="stats-grid">
@@ -194,6 +224,44 @@
             </section>
         </main>
     </div>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const notifToggle = document.querySelector('.notif-box');
+          const notifPanel = document.querySelector('.notif-panel');
+          const notifClose = document.querySelector('.notif-panel-close');
+          if (!notifToggle || !notifPanel) return;
+          notifToggle.addEventListener('click', function(event) {
+            event.stopPropagation();
+            notifPanel.classList.toggle('show');
+          });
+          if (notifClose) {
+            notifClose.addEventListener('click', function() {
+              notifPanel.classList.remove('show');
+            });
+          }
+          document.addEventListener('click', function(event) {
+            if (!event.target.closest('.notif-panel') && !event.target.closest('.notif-box')) {
+              notifPanel.classList.remove('show');
+            }
+          });
+        });
+      </script>
 
+      <script>
+    const notifBtn = document.getElementById('notifBtn');
+    const notifDropdown = document.getElementById('notifDropdown');
+
+    if (notifBtn) {
+        notifBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            notifDropdown.classList.toggle('active');
+        });
+    }
+
+    document.addEventListener('click', () => {
+        if (notifDropdown) notifDropdown.classList.remove('active');
+    });
+</script>
 </body>
 </html>
