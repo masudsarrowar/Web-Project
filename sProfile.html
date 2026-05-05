@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Healthcare Pro</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page student-dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Student Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+    <div class="nav-section">
+        <span class="section-label">MAIN</span>
+        <!-- Dashboard Icon Fixed Here -->
+        <a href="sDashboard.html" class="side-link"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a>
+        <a href="sPrescriptions.html" class="side-link"><i class="fa-solid fa-file-lines"></i> Prescriptions</a>
+        <a href="sEmergency.html" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+        <a href="sFaq.html" class="side-link"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+    </div>
+</nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="side-link" style="margin-bottom: 20px;" onclick="openChatModal(event)"><i class="fa-regular fa-comment-dots"></i> Chat Support</a>
+                <!-- Link to Profile Page -->
+                <a href="sProfile.html" class="admin-profile-box" style="text-decoration: none; color: inherit; display: flex; padding: 10px; border-radius: 10px; background: #f8fbfb;">
+                    <div class="profile-img bg-teal-solid">FA</div>
+                    <div class="profile-txt">
+                        <strong>Fatema Ahmed</strong>
+                        <span>Student</span>
+                    </div>
+                </a>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- Page Header -->
+            <header class="dash-header student-header">
+                <div class="header-left-info">
+                    <div class="header-text">
+                        <h1 style="font-size: 1.6rem; color: #0f172a;">My Profile</h1>
+                        <p>View and manage your personal information</p>
+                    </div>
+                </div>
+                <!-- Header Right (Notification Bell & Popup Dropdown - CSS Only) -->
+<div class="header-right">
+    
+    <!-- Hidden Checkbox for Click Toggle -->
+    <input type="checkbox" id="notif-toggle" class="notif-toggle-checkbox">
+    
+    <!-- Bell Icon Label (Acts as the button) -->
+    <label for="notif-toggle" class="notif-box">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notif-count">3</span>
+    </label>
+
+    <!-- ==========================================
+         NOTIFICATION DROPDOWN POPUP
+         ========================================== -->
+    <div class="notif-dropdown">
+        <div class="notif-drop-header">
+            <div>
+                <h4>Notifications</h4>
+                <span>3 unread</span>
+            </div>
+            <button class="btn-mark-read">Mark all read</button>
+        </div>
+        
+        <div class="notif-drop-body">
+            <!-- Notification Item 1 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-blue-light"><i class="fa-regular fa-user"></i></div>
+                <div class="notif-content">
+                    <h5>New Doctor Registration</h5>
+                    <p>Dr. Mahbub Rahman has registered and awaits approval</p>
+                    <span class="notif-time">5 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 2 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-purple-light"><i class="fa-solid fa-user-group"></i></div>
+                <div class="notif-content">
+                    <h5>Pending Patient Approval</h5>
+                    <p>Fatima Begum (ID: 11201456) requires approval</p>
+                    <span class="notif-time">12 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 3 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-green-light"><i class="fa-solid fa-wallet"></i></div>
+                <div class="notif-content">
+                    <h5>Payment Received</h5>
+                    <p>Payment of ৳500 received from Kamal Uddin</p>
+                    <span class="notif-time">25 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 4 -->
+            <div class="notif-item" style="border-bottom: none;">
+                <div class="notif-icon bg-orange-light"><i class="fa-regular fa-calendar-check"></i></div>
+                <div class="notif-content">
+                    <h5>New Appointment</h5>
+                    <p>Sadia Rahman scheduled with Dr. Arif Rahman at 3:30 PM</p>
+                    <span class="notif-time">1 hour ago</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notif-drop-footer">
+            <a href="#">View all notifications</a>
+        </div>
+    </div>
+</div>
+            </header>
+
+            <!-- SECTION 1: Profile Cover & Info -->
+            <section class="pro-main-card">
+                <!-- Cover Area -->
+                <div class="pro-cover-bg"></div>
+                
+                <div class="pro-content-area">
+                    <!-- Avatar & Edit Button Row -->
+                    <div class="pro-header-row">
+                        <div class="pro-avatar-box">FA</div>
+                        <div class="pro-title-box">
+                            <h2>Fatema Ahmed</h2>
+                            <p>Student ID: 011213099 &bull; Computer Science & Engineering &bull; 8th Semester</p>
+                        </div>
+                        <button class="btn-pro-edit"><i class="fa-regular fa-user"></i> Edit Profile</button>
+                    </div>
+
+                    <!-- Personal Info Grid -->
+                    <div class="pro-info-grid">
+                        <div class="pro-info-box">
+                            <div class="info-icon bg-blue-light"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="info-text">
+                                <small>Email Address</small>
+                                <strong>fatemaa@bscse.uiu.ac.bd</strong>
+                            </div>
+                        </div>
+                        <div class="pro-info-box">
+                            <div class="info-icon bg-green-light"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-text">
+                                <small>Phone Number</small>
+                                <strong>+880 1711-234567</strong>
+                            </div>
+                        </div>
+                        <div class="pro-info-box">
+                            <div class="info-icon bg-purple-light"><i class="fa-regular fa-calendar"></i></div>
+                            <div class="info-text">
+                                <small>Age</small>
+                                <strong>21 years</strong>
+                            </div>
+                        </div>
+                        <div class="pro-info-box">
+                            <div class="info-icon bg-pink-light" style="background: #fdf2f8; color: #db2777;"><i class="fa-regular fa-user"></i></div>
+                            <div class="info-text">
+                                <small>Gender</small>
+                                <strong>Female</strong>
+                            </div>
+                        </div>
+                        <div class="pro-info-box">
+                            <div class="info-icon bg-red-light"><i class="fa-solid fa-droplet"></i></div>
+                            <div class="info-text">
+                                <small>Blood Group</small>
+                                <strong>B+</strong>
+                            </div>
+                        </div>
+                        <div class="pro-info-box">
+                            <div class="info-icon bg-orange-light"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <small>Address</small>
+                                <strong>Bashundhara R/A, Dhaka</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: Profile Stats -->
+            <section class="pro-stats-grid">
+                <div class="pro-stat-card">
+                    <div class="stat-icon-l bg-blue-light"><i class="fa-solid fa-wave-square"></i></div>
+                    <div class="stat-txt-r">
+                        <small>Total Visits</small>
+                        <strong>5</strong>
+                    </div>
+                </div>
+                <div class="pro-stat-card">
+                    <div class="stat-icon-l bg-green-light"><i class="fa-regular fa-file-lines"></i></div>
+                    <div class="stat-txt-r">
+                        <small>Prescriptions</small>
+                        <strong>5</strong>
+                    </div>
+                </div>
+                <div class="pro-stat-card">
+                    <div class="stat-icon-l bg-orange-light"><i class="fa-regular fa-calendar"></i></div>
+                    <div class="stat-txt-r">
+                        <small>Pending Follow-ups</small>
+                        <strong>4</strong>
+                    </div>
+                </div>
+                <div class="pro-stat-card">
+                    <div class="stat-icon-l bg-purple-light"><i class="fa-regular fa-heart"></i></div>
+                    <div class="stat-txt-r">
+                        <small>Last Visit</small>
+                        <strong style="font-size: 1.1rem; margin-top: 5px;">March 10, 2024</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Visit History Table -->
+            <section class="s-section-box" style="padding: 0; overflow: hidden;">
+                <div class="s-section-header" style="padding: 25px 30px; margin-bottom: 0; border-bottom: 1px solid #f0f3f5;">
+                    <div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 5px;">Medical Visit History</h3>
+                        <p style="font-size: 0.9rem; color: #64748b;">Complete record of your medical consultations</p>
+                    </div>
+                    <button class="btn-export"><i class="fa-solid fa-download"></i> Export History</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="pro-history-table">
+                        <thead>
+                            <tr>
+                                <th>VISIT DATE</th>
+                                <th>DOCTOR</th>
+                                <th>REASON FOR VISIT</th>
+                                <th>DIAGNOSIS</th>
+                                <th>STATUS</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1 -->
+                            <tr>
+                                <td><i class="fa-regular fa-calendar" style="color: #94a3b8; margin-right:5px;"></i> March 10,<br>2024</td>
+                                <td>
+                                    <strong>Dr. Nasrin Ahmed</strong>
+                                    <span>General Physician</span>
+                                </td>
+                                <td>Seasonal<br>Flu</td>
+                                <td>Viral Infection -<br>Influenza Type A</td>
+                                <td><span class="badge-pill badge-confirmed">Completed</span></td>
+                                <td class="action-td">
+                                    <button class="btn-txt-teal"><i class="fa-regular fa-eye"></i> View</button>
+                                    <button class="btn-txt-blue"><i class="fa-solid fa-download"></i> Download</button>
+                                </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr>
+                                <td><i class="fa-regular fa-calendar" style="color: #94a3b8; margin-right:5px;"></i> February 25,<br>2024</td>
+                                <td>
+                                    <strong>Dr. Kamal Hossain</strong>
+                                    <span>Mental Health Counselor</span>
+                                </td>
+                                <td>Headache &<br>Fever</td>
+                                <td>Tension Headache due<br>to Academic Stress</td>
+                                <td><span class="badge-pill badge-confirmed">Completed</span></td>
+                                <td class="action-td">
+                                    <button class="btn-txt-teal"><i class="fa-regular fa-eye"></i> View</button>
+                                    <button class="btn-txt-blue"><i class="fa-solid fa-download"></i> Download</button>
+                                </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr>
+                                <td><i class="fa-regular fa-calendar" style="color: #94a3b8; margin-right:5px;"></i> February 15,<br>2024</td>
+                                <td>
+                                    <strong>Dr. Rahul Das</strong>
+                                    <span>Psychiatrist</span>
+                                </td>
+                                <td>Anxiety &<br>Stress</td>
+                                <td>Mild Anxiety<br>Disorder</td>
+                                <td><span class="badge-pill badge-confirmed">Completed</span></td>
+                                <td class="action-td">
+                                    <button class="btn-txt-teal"><i class="fa-regular fa-eye"></i> View</button>
+                                    <button class="btn-txt-blue"><i class="fa-solid fa-download"></i> Download</button>
+                                </td>
+                            </tr>
+                            <!-- Row 4 -->
+                            <tr>
+                                <td><i class="fa-regular fa-calendar" style="color: #94a3b8; margin-right:5px;"></i> January 20,<br>2024</td>
+                                <td>
+                                    <strong>Dr. Fatema Rahman</strong>
+                                    <span>Nutritionist</span>
+                                </td>
+                                <td>Nutrition<br>Consultation</td>
+                                <td>Vitamin D<br>Deficiency</td>
+                                <td><span class="badge-pill badge-confirmed">Completed</span></td>
+                                <td class="action-td">
+                                    <button class="btn-txt-teal"><i class="fa-regular fa-eye"></i> View</button>
+                                    <button class="btn-txt-blue"><i class="fa-solid fa-download"></i> Download</button>
+                                </td>
+                            </tr>
+                            <!-- Row 5 -->
+                            <tr>
+                                <td><i class="fa-regular fa-calendar" style="color: #94a3b8; margin-right:5px;"></i> January 5,<br>2024</td>
+                                <td>
+                                    <strong>Dr. Nasrin Ahmed</strong>
+                                    <span>General Physician</span>
+                                </td>
+                                <td>Regular<br>Check-up</td>
+                                <td>Overall<br>Healthy</td>
+                                <td><span class="badge-pill badge-confirmed">Completed</span></td>
+                                <td class="action-td">
+                                    <button class="btn-txt-teal"><i class="fa-regular fa-eye"></i> View</button>
+                                    <button class="btn-txt-blue"><i class="fa-solid fa-download"></i> Download</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ==========================================
+         CHAT SUPPORT MODAL (POPUP)
+         ========================================== -->
+    <div class="modal-overlay" id="chatModal">
+        <div class="modal-box chat-modal-box">
+            
+            <!-- Header -->
+            <div class="modal-header chat-header">
+                <div>
+                    <h2 style="display: flex; align-items: center; gap: 10px; font-size: 1.3rem; margin-bottom: 5px;">
+                        <i class="fa-regular fa-message" style="color: var(--teal);"></i> Chat with Healthcare Support
+                    </h2>
+                    <p style="font-size: 0.9rem;">Our support team is here to help you with any questions or concerns you may have.</p>
+                </div>
+                <button class="btn-close-modal" onclick="closeChatModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- Chat Body -->
+            <div class="chat-body">
+                
+                <!-- Message 1 -->
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            Hello Fatema! Welcome to Healthcare Pro. How can I assist you today?
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+
+                <!-- Message 2 -->
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            You can ask me about:<br>
+                            &bull; Booking appointments<br>
+                            &bull; Viewing prescriptions<br>
+                            &bull; Emergency services<br>
+                            &bull; Health center information<br>
+                            &bull; Doctor availability
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Chat Footer (Input) -->
+            <div class="chat-footer">
+                <div class="chat-input-wrapper">
+                    <input type="text" placeholder="Type your message...">
+                    <button class="btn-mic"><i class="fa-solid fa-microphone"></i></button>
+                </div>
+                <button class="btn-send-chat" onclick="alert('Message Sent!'); closeChatModal();"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+            <div class="chat-footer-hint">
+                Press Enter to send &bull; Click mic icon for voice input
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Chat Modal Open/Close -->
+    <script>
+        function openChatModal(event) {
+            if(event) event.preventDefault(); // Prevents page jumping to top
+            document.getElementById('chatModal').classList.add('active');
+        }
+        function closeChatModal() {
+            document.getElementById('chatModal').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>

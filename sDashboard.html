@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Healthcare Pro</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- গ্লোবাল লেআউট ঠিক রাখতে admin-dashboard-page ক্লাসটি রাখা হলো -->
+<body class="admin-dashboard-page student-dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Student Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+    <div class="nav-section">
+        <span class="section-label">MAIN</span>
+        <a href="sDashboard.html" class="side-link active"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a>
+        <a href="sPrescriptions.html" class="side-link"><i class="fa-solid fa-file-lines"></i> Prescriptions</a>
+        <a href="sEmergency.html" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+        <a href="sFaq.html" class="side-link"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+    </div>
+</nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="side-link" style="margin-bottom: 20px;" onclick="openChatModal(event)"><i class="fa-regular fa-comment-dots"></i> Chat Support</a>
+                <a href="sProfile.html" class="admin-profile-box" style="text-decoration: none; color: inherit; display: flex; padding: 10px; border-radius: 10px; background: transparent; transition: 0.3s;">
+    <div class="profile-img bg-teal-solid">FA</div>
+    <div class="profile-txt">
+        <strong>Fatema Ahmed</strong>
+        <span>Student</span>
+    </div>
+</a>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- Header Section -->
+            <header class="dash-header student-header">
+                <div class="header-left-info">
+                    <div class="header-text">
+                        <h1>Dashboard</h1>
+                        <p>Welcome back, Fatema Ahmed</p>
+                    </div>
+                </div>
+                <!-- Header Right (Notification Bell & Popup Dropdown - CSS Only) -->
+<div class="header-right">
+    
+    <!-- Hidden Checkbox for Click Toggle -->
+    <input type="checkbox" id="notif-toggle" class="notif-toggle-checkbox">
+    
+    <!-- Bell Icon Label (Acts as the button) -->
+    <label for="notif-toggle" class="notif-box">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notif-count">3</span>
+    </label>
+
+    <!-- ==========================================
+         NOTIFICATION DROPDOWN POPUP
+         ========================================== -->
+    <div class="notif-dropdown">
+        <div class="notif-drop-header">
+            <div>
+                <h4>Notifications</h4>
+                <span>3 unread</span>
+            </div>
+            <button class="btn-mark-read">Mark all read</button>
+        </div>
+        
+        <div class="notif-drop-body">
+            <!-- Notification Item 1 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-blue-light"><i class="fa-regular fa-user"></i></div>
+                <div class="notif-content">
+                    <h5>New Doctor Registration</h5>
+                    <p>Dr. Mahbub Rahman has registered and awaits approval</p>
+                    <span class="notif-time">5 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 2 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-purple-light"><i class="fa-solid fa-user-group"></i></div>
+                <div class="notif-content">
+                    <h5>Pending Patient Approval</h5>
+                    <p>Fatima Begum (ID: 11201456) requires approval</p>
+                    <span class="notif-time">12 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 3 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-green-light"><i class="fa-solid fa-wallet"></i></div>
+                <div class="notif-content">
+                    <h5>Payment Received</h5>
+                    <p>Payment of ৳500 received from Kamal Uddin</p>
+                    <span class="notif-time">25 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 4 -->
+            <div class="notif-item" style="border-bottom: none;">
+                <div class="notif-icon bg-orange-light"><i class="fa-regular fa-calendar-check"></i></div>
+                <div class="notif-content">
+                    <h5>New Appointment</h5>
+                    <p>Sadia Rahman scheduled with Dr. Arif Rahman at 3:30 PM</p>
+                    <span class="notif-time">1 hour ago</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notif-drop-footer">
+            <a href="#">View all notifications</a>
+        </div>
+    </div>
+</div>
+            </header>
+
+            <!-- Top Stats Row -->
+            <div class="student-top-stats">
+                <div class="s-stat-item">
+                    <div class="s-icon-box bg-blue-light"><i class="fa-regular fa-calendar"></i></div>
+                    <div class="s-stat-text"><span>Total Visits</span><strong>12</strong></div>
+                </div>
+                <div class="s-stat-item">
+                    <div class="s-icon-box bg-mint"><i class="fa-regular fa-file-lines"></i></div>
+                    <div class="s-stat-text"><span>Prescriptions</span><strong>8</strong></div>
+                </div>
+                <div class="s-stat-item">
+                    <div class="s-icon-box bg-purple-light"><i class="fa-regular fa-user"></i></div>
+                    <div class="s-stat-text"><span>Doctors</span><strong>4</strong></div>
+                </div>
+                <div class="s-stat-item">
+                    <div class="s-icon-box bg-orange-light"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="s-stat-text"><span>Health Score</span><strong>Good</strong></div>
+                </div>
+            </div>
+
+            <!-- Vitals Grid (4 Cards) -->
+            <div class="vitals-grid">
+                <div class="v-card">
+                    <div class="icon-circle bg-red-light"><i class="fa-regular fa-heart"></i></div>
+                    <span class="v-label">Blood Pressure</span>
+                    <strong class="v-value">120/80</strong>
+                    <span class="v-sub">mmHg</span>
+                </div>
+                <div class="v-card">
+                    <div class="icon-circle bg-blue-light"><i class="fa-solid fa-weight-scale"></i></div>
+                    <span class="v-label">Weight</span>
+                    <strong class="v-value">58 kg</strong>
+                    <span class="v-sub">Height: 5'4"</span>
+                </div>
+                <div class="v-card">
+                    <div class="icon-circle bg-green-light"><i class="fa-solid fa-wave-square"></i></div>
+                    <span class="v-label">Pulse Rate</span>
+                    <strong class="v-value">72 bpm</strong>
+                    <span class="v-sub">Normal</span>
+                </div>
+                <div class="v-card">
+                    <div class="icon-circle bg-purple-light"><i class="fa-solid fa-droplet"></i></div>
+                    <span class="v-label">Blood Group</span>
+                    <strong class="v-value">B+</strong>
+                    <span class="v-sub">Positive</span>
+                </div>
+            </div>
+
+            <!-- Search & Action Bar -->
+            <div class="student-action-bar">
+                <div class="s-search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search doctors by name or specialization...">
+                </div>
+                <button class="btn-teal-pill" onclick="openModal()"><i class="fa-regular fa-calendar-check"></i> Request Appointment</button>
+            </div>
+
+            <!-- Appointments Section -->
+            <section class="s-section-box">
+                <div class="s-section-header">
+                    <h3>My Appointments</h3>
+                    <i class="fa-regular fa-calendar" style="color: #64748b; font-size: 1.2rem;"></i>
+                </div>
+                
+                <!-- Appointment 1 -->
+                <div class="s-list-card">
+                    <div class="list-top-row">
+                        <div class="list-user-info">
+                            <div class="avatar-circle bg-mint"><i class="fa-regular fa-user" style="color: var(--teal);"></i></div>
+                            <div>
+                                <strong>Dr. Nasrin Ahmed</strong>
+                                <span>General Physician</span>
+                            </div>
+                        </div>
+                        <span class="badge-pill badge-confirmed">Confirmed</span>
+                    </div>
+                    <div class="list-mid-row">
+                        <span><i class="fa-regular fa-calendar"></i> Jan 20, 2024</span>
+                        <span><i class="fa-regular fa-clock"></i> 10:00 AM</span>
+                    </div>
+                    <div class="list-bot-row">
+                        <small>Reason:</small>
+                        <p>Regular checkup</p>
+                    </div>
+                </div>
+
+                <!-- Appointment 2 -->
+                <div class="s-list-card">
+                    <div class="list-top-row">
+                        <div class="list-user-info">
+                            <div class="avatar-circle bg-mint"><i class="fa-regular fa-user" style="color: var(--teal);"></i></div>
+                            <div>
+                                <strong>Dr. Kamal Hossain</strong>
+                                <span>Mental Health</span>
+                            </div>
+                        </div>
+                        <span class="badge-pill badge-completed">Completed</span>
+                    </div>
+                    <div class="list-mid-row">
+                        <span><i class="fa-regular fa-calendar"></i> Jan 15, 2024</span>
+                        <span><i class="fa-regular fa-clock"></i> 2:00 PM</span>
+                    </div>
+                    <div class="list-bot-row">
+                        <small>Reason:</small>
+                        <p>Counseling session</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prescriptions Section -->
+            <section class="s-section-box">
+                <div class="s-section-header">
+                    <h3>Recent Prescriptions</h3>
+                    <i class="fa-regular fa-file-lines" style="color: #64748b; font-size: 1.2rem;"></i>
+                </div>
+
+                <!-- Prescription 1 -->
+                <div class="s-list-card">
+                    <div class="rx-row-flex">
+                        <strong>Seasonal Flu</strong>
+                        <span class="badge-pill badge-medicines">3 medicines</span>
+                    </div>
+                    <p class="rx-doc">Dr. Nasrin Ahmed</p>
+                    <div class="rx-row-flex" style="margin-top: 25px;">
+                        <span class="rx-date">March 10, 2024</span>
+                        <a href="#" class="rx-download"><i class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <!-- Prescription 2 -->
+                <div class="s-list-card">
+                    <div class="rx-row-flex">
+                        <strong>Headache & Fever</strong>
+                        <span class="badge-pill badge-medicines">2 medicines</span>
+                    </div>
+                    <p class="rx-doc">Dr. Kamal Hossain</p>
+                    <div class="rx-row-flex" style="margin-top: 25px;">
+                        <span class="rx-date">February 25, 2024</span>
+                        <a href="#" class="rx-download"><i class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <!-- Prescription 3 -->
+                <div class="s-list-card">
+                    <div class="rx-row-flex">
+                        <strong>Anxiety & Stress</strong>
+                        <span class="badge-pill badge-medicines">2 medicines</span>
+                    </div>
+                    <p class="rx-doc">Dr. Rahul Das</p>
+                    <div class="rx-row-flex" style="margin-top: 25px;">
+                        <span class="rx-date">February 15, 2024</span>
+                        <a href="#" class="rx-download"><i class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <div class="view-all-link-wrapper">
+                    <a href="#" class="view-all-link">View All Prescriptions <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+
+    <!-- ==========================================
+         APPOINTMENT MODAL (POPUP FORM)
+         ========================================== -->
+    <div class="modal-overlay" id="appointmentModal">
+        <div class="modal-box">
+            <!-- Header -->
+            <div class="modal-header">
+                <div>
+                    <h2>Book an Appointment</h2>
+                    <p>Fill in the details below to schedule your appointment with a doctor.</p>
+                </div>
+                <button class="btn-close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- Form -->
+            <form class="modal-form" onsubmit="event.preventDefault(); alert('Appointment Successfully Booked!'); closeModal();">
+                
+                <div class="form-group">
+                    <label>Select Doctor</label>
+                    <div class="select-wrapper">
+                        <select required>
+                            <option value="" disabled selected>Choose a doctor</option>
+                            <option value="nasrin">Dr. Nasrin Ahmed - General Physician</option>
+                            <option value="kamal">Dr. Kamal Hossain - Mental Health</option>
+                            <option value="rahul">Dr. Rahul Das - Cardiology</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Appointment Date</label>
+                    <input type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Time</label>
+                    <div class="select-wrapper">
+                        <select required>
+                            <option value="" disabled selected>Select time slot</option>
+                            <option value="10am">10:00 AM - 11:00 AM</option>
+                            <option value="12pm">12:00 PM - 01:00 PM</option>
+                            <option value="3pm">03:00 PM - 04:00 PM</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Reason for Visit</label>
+                    <textarea rows="3" placeholder="Briefly describe your symptoms or reason for appointment..." required></textarea>
+                </div>
+
+                <!-- Footer Buttons -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal-cancel" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn-modal-submit"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal Open/Close -->
+    <script>
+        function openModal() {
+            document.getElementById('appointmentModal').classList.add('active');
+        }
+        function closeModal() {
+            document.getElementById('appointmentModal').classList.remove('active');
+        }
+    </script>
+
+
+<!-- ==========================================
+         CHAT SUPPORT MODAL (POPUP)
+         ========================================== -->
+    <div class="modal-overlay" id="chatModal">
+        <div class="modal-box chat-modal-box">
+            
+            <!-- Header -->
+            <div class="modal-header chat-header">
+                <div>
+                    <h2 style="display: flex; align-items: center; gap: 10px; font-size: 1.3rem; margin-bottom: 5px;">
+                        <i class="fa-regular fa-message" style="color: var(--teal);"></i> Chat with Healthcare Support
+                    </h2>
+                    <p style="font-size: 0.9rem;">Our support team is here to help you with any questions or concerns you may have.</p>
+                </div>
+                <button class="btn-close-modal" onclick="closeChatModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- Chat Body -->
+            <div class="chat-body">
+                
+                <!-- Message 1 -->
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            Hello Fatema! Welcome to Healthcare Pro. How can I assist you today?
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+
+                <!-- Message 2 -->
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            You can ask me about:<br>
+                            &bull; Booking appointments<br>
+                            &bull; Viewing prescriptions<br>
+                            &bull; Emergency services<br>
+                            &bull; Health center information<br>
+                            &bull; Doctor availability
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Chat Footer (Input) -->
+            <div class="chat-footer">
+                <div class="chat-input-wrapper">
+                    <input type="text" placeholder="Type your message...">
+                    <button class="btn-mic"><i class="fa-solid fa-microphone"></i></button>
+                </div>
+                <button class="btn-send-chat" onclick="alert('Message Sent!'); closeChatModal();"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+            <div class="chat-footer-hint">
+                Press Enter to send &bull; Click mic icon for voice input
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Chat Modal Open/Close -->
+    <script>
+        function openChatModal(event) {
+            if(event) event.preventDefault(); // Prevents page jumping to top
+            document.getElementById('chatModal').classList.add('active');
+        }
+        function closeChatModal() {
+            document.getElementById('chatModal').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>
