@@ -1888,3 +1888,114 @@ header { background: #fff; padding: 18px 0; border-bottom: 1px solid var(--borde
    7. CHAT PAGE STYLES (Isolated)
    ========================================= */
 .chat-page .chat-container-layout { display: grid; grid-template-columns: 320px 1fr; background: #fff; border-radius: 30px; height: calc(100vh - 220px); border: 1px solid var(--border); overflow: hidden; }
+
+
+/* ============================================================
+   ADMIN PAYMENT MANAGEMENT PAGE CSS (.payment-page)
+   ============================================================ */
+
+/* Tab Switcher Styling */
+.payment-page .payment-tabs-box {
+    display: inline-flex;
+    background: #f1f5f9;
+    padding: 6px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.payment-page .pay-tab-btn {
+    padding: 10px 25px;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #64748b;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.payment-page .pay-tab-btn.active {
+    background: #ffffff;
+    color: var(--teal);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Visibility Control */
+.payment-page .payment-view { display: none; }
+.payment-page .payment-view.active { display: block; animation: modalFadeIn 0.3s ease; }
+
+/* Main Card Styling (35px radius per Modal rule) */
+.payment-page .payment-content-card {
+    background: #ffffff;
+    border-radius: 35px;
+    padding: 45px;
+    border: 1px solid var(--border);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.02);
+}
+
+.payment-page .card-header-info { margin-bottom: 35px; }
+.payment-page .card-header-info h2 { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 5px; }
+.payment-page .card-header-info p { color: var(--text); font-size: 1rem; }
+
+/* Table Adjustments */
+.payment-page .payment-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.payment-page .payment-data-table th {
+    text-align: left;
+    padding: 15px 10px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #94a3b8;
+    border-bottom: 1.5px solid #f1f5f9;
+}
+
+.payment-page .payment-data-table td {
+    padding: 22px 10px;
+    border-bottom: 1px solid #f8fafc;
+    font-size: 0.95rem;
+    color: var(--navy);
+}
+
+.payment-page .teal-bold-text { color: var(--teal); font-weight: 700; font-size: 1.1rem; }
+
+/* Status Badges */
+.payment-page .p-status-badge {
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.payment-page .paid { background-color: #dcfce7; color: #15803d; }
+.payment-page .pending { background-color: #fef9c3; color: #a16207; }
+
+/* Summary Grid at Bottom */
+.payment-page .payment-summary-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.payment-page .sum-box {
+    padding: 30px 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-page .sum-box span { font-size: 0.9rem; font-weight: 700; color: #64748b; }
+.payment-page .sum-box h3 { font-size: 2rem; font-weight: 800; }
+
+/* Colors for Summary Boxes */
+.payment-page .bg-grey-light { background-color: #f8fafc; }
+.payment-page .bg-mint-light { background-color: #f0fdfa; }
+.payment-page .bg-yellow-light { background-color: #fffbeb; }
+
+.payment-page .txt-mint-dark { color: #0d9488; }
+.payment-page .txt-yellow-dark { color: #b45309; }
