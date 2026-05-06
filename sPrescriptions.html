@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Prescriptions | Healthcare Pro</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page student-dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Student Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+    <div class="nav-section">
+        <span class="section-label">MAIN</span>
+        <a href="sDashboard.html" class="side-link"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a>
+        <a href="sPrescriptions.html" class="side-link active"><i class="fa-solid fa-file-lines"></i> Prescriptions</a>
+        <a href="sEmergency.html" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+        <a href="sFaq.html" class="side-link"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+    </div>
+</nav>
+            </div>
+
+            <!-- CHAT SUPPORT -->
+            <div class="sidebar-bottom">
+                <a href="#" class="side-link" style="margin-bottom: 20px;" onclick="openChatModal(event)"><i class="fa-regular fa-comment-dots"></i> Chat Support</a>
+                
+                <a href="sProfile.html" class="admin-profile-box" style="text-decoration: none; color: inherit; display: flex; padding: 10px; border-radius: 10px; background: transparent; transition: 0.3s;">
+                    <div class="profile-img bg-teal-solid">FA</div>
+                    <div class="profile-txt">
+                        <strong>Fatema Ahmed</strong>
+                        <span>Student</span>
+                    </div>
+                </a>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <header class="dash-header s-page-header" style="display: flex; justify-content: space-between; align-items: center;">
+                
+                <!-- Header Left (Back button & Title) -->
+                <div class="header-left-info" style="display: flex; align-items: center; gap: 15px;">
+                    <a href="sDashboard.html" class="back-arrow-link"><i class="fa-solid fa-arrow-left"></i></a>
+                    <h1 style="margin: 0; font-size: 1.6rem; font-weight: 800; color: #0f172a;">My Prescriptions</h1>
+                </div>
+
+                <!-- Header Right (Notification Bell CSS Only) -->
+                <div class="header-right" style="position: relative;">
+                    
+                    <!-- Hidden Checkbox for Click Toggle -->
+                    <input type="checkbox" id="notif-toggle" class="notif-toggle-checkbox">
+                    
+                    <!-- Bell Icon Label (Acts as the button) -->
+                    <label for="notif-toggle" class="notif-box">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notif-count">3</span>
+                    </label>
+
+                    <!-- NOTIFICATION DROPDOWN POPUP -->
+                    <div class="notif-dropdown">
+                        <div class="notif-drop-header">
+                            <div>
+                                <h4>Notifications</h4>
+                                <span>3 unread</span>
+                            </div>
+                            <button class="btn-mark-read">Mark all read</button>
+                        </div>
+                        
+                        <div class="notif-drop-body">
+                            <!-- Notification Item 1 -->
+                            <div class="notif-item">
+                                <div class="notif-icon bg-blue-light"><i class="fa-regular fa-user"></i></div>
+                                <div class="notif-content">
+                                    <h5>New Doctor Registration</h5>
+                                    <p>Dr. Mahbub Rahman has registered and awaits approval</p>
+                                    <span class="notif-time">5 min ago <span class="unread-dot"></span></span>
+                                </div>
+                            </div>
+
+                            <!-- Notification Item 2 -->
+                            <div class="notif-item">
+                                <div class="notif-icon bg-purple-light"><i class="fa-solid fa-user-group"></i></div>
+                                <div class="notif-content">
+                                    <h5>Pending Patient Approval</h5>
+                                    <p>Fatima Begum (ID: 11201456) requires approval</p>
+                                    <span class="notif-time">12 min ago <span class="unread-dot"></span></span>
+                                </div>
+                            </div>
+
+                            <!-- Notification Item 3 -->
+                            <div class="notif-item">
+                                <div class="notif-icon bg-green-light"><i class="fa-solid fa-wallet"></i></div>
+                                <div class="notif-content">
+                                    <h5>Payment Received</h5>
+                                    <p>Payment of ৳500 received from Kamal Uddin</p>
+                                    <span class="notif-time">25 min ago <span class="unread-dot"></span></span>
+                                </div>
+                            </div>
+
+                            <!-- Notification Item 4 -->
+                            <div class="notif-item" style="border-bottom: none;">
+                                <div class="notif-icon bg-orange-light"><i class="fa-regular fa-calendar-check"></i></div>
+                                <div class="notif-content">
+                                    <h5>New Appointment</h5>
+                                    <p>Sadia Rahman scheduled with Dr. Arif Rahman at 3:30 PM</p>
+                                    <span class="notif-time">1 hour ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="notif-drop-footer">
+                            <a href="#">View all notifications</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="s-page-intro">
+                <h2>Prescription History</h2>
+                <p>View your past medical prescriptions and treatment records</p>
+            </div>
+
+            <!-- Prescription Cards List -->
+            <div class="rx-history-container">
+                
+                <!-- Card 1 -->
+                <div class="rx-history-card">
+                    <div class="rx-card-top">
+                        <div class="rx-top-left">
+                            <div class="rx-icon-box bg-mint"><i class="fa-solid fa-file-prescription"></i></div>
+                            <div>
+                                <h4>Prescription #001</h4>
+                                <span><i class="fa-regular fa-calendar"></i> January 15, 2024</span>
+                            </div>
+                        </div>
+                        <button class="btn-view-details" onclick="openRxModal()"><i class="fa-regular fa-eye"></i> View Details</button>
+                    </div>
+                    <div class="rx-card-bottom">
+                        <div class="rx-info-col col-large">
+                            <span class="rx-label">DIAGNOSED WITH</span>
+                            <div class="rx-tags-flex">
+                                <span class="rx-tag-red">Common Cold</span>
+                                <span class="rx-tag-red">Mild Fever</span>
+                            </div>
+                        </div>
+                        <div class="rx-info-col">
+                            <span class="rx-label">MEDICINES</span>
+                            <div class="rx-val"><i class="fa-solid fa-capsules icon-teal"></i> 2 prescribed</div>
+                        </div>
+                        <div class="rx-info-col">
+                            <span class="rx-label">TESTS</span>
+                            <div class="rx-val"><i class="fa-solid fa-vial icon-blue"></i> 2 recommended</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="rx-history-card">
+                    <div class="rx-card-top">
+                        <div class="rx-top-left">
+                            <div class="rx-icon-box bg-mint"><i class="fa-solid fa-file-prescription"></i></div>
+                            <div>
+                                <h4>Prescription #002</h4>
+                                <span><i class="fa-regular fa-calendar"></i> December 10, 2023</span>
+                            </div>
+                        </div>
+                        <button class="btn-view-details" onclick="openRxModal()"><i class="fa-regular fa-eye"></i> View Details</button>
+                    </div>
+                    <div class="rx-card-bottom">
+                        <div class="rx-info-col col-large">
+                            <span class="rx-label">DIAGNOSED WITH</span>
+                            <div class="rx-tags-flex">
+                                <span class="rx-tag-red">Gastritis</span>
+                            </div>
+                        </div>
+                        <div class="rx-info-col">
+                            <span class="rx-label">MEDICINES</span>
+                            <div class="rx-val"><i class="fa-solid fa-capsules icon-teal"></i> 2 prescribed</div>
+                        </div>
+                        <div class="rx-info-col">
+                            <span class="rx-label">TESTS</span>
+                            <div class="rx-val"><i class="fa-solid fa-vial icon-blue"></i> 1 recommended</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="rx-history-card">
+                    <div class="rx-card-top">
+                        <div class="rx-top-left">
+                            <div class="rx-icon-box bg-mint"><i class="fa-solid fa-file-prescription"></i></div>
+                            <div>
+                                <h4>Prescription #003</h4>
+                                <span><i class="fa-regular fa-calendar"></i> November 5, 2023</span>
+                            </div>
+                        </div>
+                        <button class="btn-view-details" onclick="openRxModal()"><i class="fa-regular fa-eye"></i> View Details</button>
+                    </div>
+                    <div class="rx-card-bottom">
+                        <div class="rx-info-col col-large">
+                            <span class="rx-label">DIAGNOSED WITH</span>
+                            <div class="rx-tags-flex">
+                                <span class="rx-tag-red">Seasonal Allergy</span>
+                            </div>
+                        </div>
+                        <div class="rx-info-col">
+                            <span class="rx-label">MEDICINES</span>
+                            <div class="rx-val"><i class="fa-solid fa-capsules icon-teal"></i> 1 prescribed</div>
+                        </div>
+                        <div class="rx-info-col">
+                            <span class="rx-label">TESTS</span>
+                            <div class="rx-val"><i class="fa-solid fa-vial icon-blue"></i> None</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- PRESCRIPTION DETAILS MODAL -->
+    <div class="modal-overlay" id="rxDetailsModal">
+        <div class="modal-box rx-details-box">
+            <div class="modal-header rx-header">
+                <h2>Prescription Details</h2>
+                <button class="btn-close-modal" onclick="closeRxModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="rx-modal-date">
+                <i class="fa-regular fa-calendar"></i> January 15, 2024
+            </div>
+            <div class="rx-modal-body">
+                <div class="rx-modal-section">
+                    <h3>Diagnosed Diseases</h3>
+                    <div class="rx-tags-flex">
+                        <span class="rx-tag-red">Common Cold</span>
+                        <span class="rx-tag-red">Mild Fever</span>
+                    </div>
+                </div>
+                <div class="rx-modal-section">
+                    <h3>Recommended Tests</h3>
+                    <div class="rx-tags-flex">
+                        <span class="rx-tag-blue">CBC</span>
+                        <span class="rx-tag-blue">CRP</span>
+                    </div>
+                </div>
+                <div class="rx-modal-section">
+                    <h3>Prescribed Medicines</h3>
+                    <div class="med-card">
+                        <div class="med-top">
+                            <strong>Napa Extra</strong>
+                            <span class="med-duration">5 days</span>
+                        </div>
+                        <span class="med-type">Tablet</span>
+                        <div class="med-bottom">
+                            <div class="med-info"><small>Dosage</small><p>Morning, Night</p></div>
+                            <div class="med-info"><small>Instructions</small><p>After meal</p></div>
+                        </div>
+                    </div>
+                    <div class="med-card">
+                        <div class="med-top">
+                            <strong>Afinix</strong>
+                            <span class="med-duration">7 days</span>
+                        </div>
+                        <span class="med-type">Tablet</span>
+                        <div class="med-bottom">
+                            <div class="med-info"><small>Dosage</small><p>Morning, Noon, Night</p></div>
+                            <div class="med-info"><small>Instructions</small><p>Before meal</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHAT SUPPORT MODAL (POPUP) -->
+    <div class="modal-overlay" id="chatModal">
+        <div class="modal-box chat-modal-box">
+            <div class="modal-header chat-header">
+                <div>
+                    <h2 style="display: flex; align-items: center; gap: 10px; font-size: 1.3rem; margin-bottom: 5px;">
+                        <i class="fa-regular fa-message" style="color: var(--teal);"></i> Chat with Healthcare Support
+                    </h2>
+                    <p style="font-size: 0.9rem;">Our support team is here to help you with any questions or concerns you may have.</p>
+                </div>
+                <button class="btn-close-modal" onclick="closeChatModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-body">
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">Hello Fatema! Welcome to Healthcare Pro. How can I assist you today?</div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            You can ask me about:<br>
+                            &bull; Booking appointments<br>
+                            &bull; Viewing prescriptions<br>
+                            &bull; Emergency services<br>
+                            &bull; Health center information<br>
+                            &bull; Doctor availability
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <div class="chat-input-wrapper">
+                    <input type="text" placeholder="Type your message...">
+                    <button class="btn-mic"><i class="fa-solid fa-microphone"></i></button>
+                </div>
+                <button class="btn-send-chat" onclick="alert('Message Sent!'); closeChatModal();"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+            <div class="chat-footer-hint">Press Enter to send &bull; Click mic icon for voice input</div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modals -->
+    <script>
+        // RX Details Modal
+        function openRxModal() {
+            document.getElementById('rxDetailsModal').classList.add('active');
+        }
+        function closeRxModal() {
+            document.getElementById('rxDetailsModal').classList.remove('active');
+        }
+
+        // Chat Modal
+        function openChatModal(event) {
+            if(event) event.preventDefault();
+            document.getElementById('chatModal').classList.add('active');
+        }
+        function closeChatModal() {
+            document.getElementById('chatModal').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency | Healthcare Pro</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page student-dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Student Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+    <div class="nav-section">
+        <span class="section-label">MAIN</span>
+        <a href="sDashboard.html" class="side-link"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a>
+        <a href="sPrescriptions.html" class="side-link"><i class="fa-solid fa-file-lines"></i> Prescriptions</a>
+        <a href="sEmergency.html" class="side-link active"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+        <a href="sFaq.html" class="side-link"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+    </div>
+</nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="side-link" style="margin-bottom: 20px;" onclick="openChatModal(event)"><i class="fa-regular fa-comment-dots"></i> Chat Support</a>
+                <a href="sProfile.html" class="admin-profile-box" style="text-decoration: none; color: inherit; display: flex; padding: 10px; border-radius: 10px; background: transparent; transition: 0.3s;">
+    <div class="profile-img bg-teal-solid">FA</div>
+    <div class="profile-txt">
+        <strong>Fatema Ahmed</strong>
+        <span>Student</span>
+    </div>
+</a>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- Page Header -->
+            <header class="dash-header student-header">
+                <div class="header-left-info">
+                    <div class="header-text">
+                        <h1 style="font-size: 1.6rem; color: #0f172a;">Emergency</h1>
+                    </div>
+                </div>
+               <!-- Header Right (Notification Bell & Popup Dropdown - CSS Only) -->
+<div class="header-right">
+    
+    <!-- Hidden Checkbox for Click Toggle -->
+    <input type="checkbox" id="notif-toggle" class="notif-toggle-checkbox">
+    
+    <!-- Bell Icon Label (Acts as the button) -->
+    <label for="notif-toggle" class="notif-box">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notif-count">3</span>
+    </label>
+
+    <!-- ==========================================
+         NOTIFICATION DROPDOWN POPUP
+         ========================================== -->
+    <div class="notif-dropdown">
+        <div class="notif-drop-header">
+            <div>
+                <h4>Notifications</h4>
+                <span>3 unread</span>
+            </div>
+            <button class="btn-mark-read">Mark all read</button>
+        </div>
+        
+        <div class="notif-drop-body">
+            <!-- Notification Item 1 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-blue-light"><i class="fa-regular fa-user"></i></div>
+                <div class="notif-content">
+                    <h5>New Doctor Registration</h5>
+                    <p>Dr. Mahbub Rahman has registered and awaits approval</p>
+                    <span class="notif-time">5 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 2 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-purple-light"><i class="fa-solid fa-user-group"></i></div>
+                <div class="notif-content">
+                    <h5>Pending Patient Approval</h5>
+                    <p>Fatima Begum (ID: 11201456) requires approval</p>
+                    <span class="notif-time">12 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 3 -->
+            <div class="notif-item">
+                <div class="notif-icon bg-green-light"><i class="fa-solid fa-wallet"></i></div>
+                <div class="notif-content">
+                    <h5>Payment Received</h5>
+                    <p>Payment of ৳500 received from Kamal Uddin</p>
+                    <span class="notif-time">25 min ago <span class="unread-dot"></span></span>
+                </div>
+            </div>
+
+            <!-- Notification Item 4 -->
+            <div class="notif-item" style="border-bottom: none;">
+                <div class="notif-icon bg-orange-light"><i class="fa-regular fa-calendar-check"></i></div>
+                <div class="notif-content">
+                    <h5>New Appointment</h5>
+                    <p>Sadia Rahman scheduled with Dr. Arif Rahman at 3:30 PM</p>
+                    <span class="notif-time">1 hour ago</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notif-drop-footer">
+            <a href="#">View all notifications</a>
+        </div>
+    </div>
+</div>
+            </header>
+
+            <!-- SECTION 1: Emergency Hotlines -->
+            <section class="em-section">
+                <div class="em-sec-header">
+                    <h2>Emergency Hotlines</h2>
+                    <p>Call immediately in case of emergency</p>
+                </div>
+                
+                <div class="em-hotline-grid">
+                    <div class="em-hl-card">
+                        <div class="em-hl-icon bg-red-solid"><i class="fa-solid fa-phone-volume"></i></div>
+                        <span class="hl-label">National Emergency</span>
+                        <strong class="hl-number">999</strong>
+                        <small class="hl-sub">Police, Fire & Ambulance</small>
+                    </div>
+                    <div class="em-hl-card">
+                        <div class="em-hl-icon bg-orange-solid"><i class="fa-solid fa-truck-medical"></i></div>
+                        <span class="hl-label">Ambulance</span>
+                        <strong class="hl-number">199</strong>
+                        <small class="hl-sub">Emergency Ambulance</small>
+                    </div>
+                    <div class="em-hl-card">
+                        <div class="em-hl-icon bg-purple-solid"><i class="fa-solid fa-heart"></i></div>
+                        <span class="hl-label">Mental Health</span>
+                        <strong class="hl-number">01779-554391</strong>
+                        <small class="hl-sub">Kaan Pete Roi</small>
+                    </div>
+                    <div class="em-hl-card">
+                        <div class="em-hl-icon bg-pink-solid"><i class="fa-solid fa-shield-heart"></i></div>
+                        <span class="hl-label">Suicide Prevention</span>
+                        <strong class="hl-number">09638-133133</strong>
+                        <small class="hl-sub">Moner Bondhu</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: Emergency Response Protocol -->
+            <section class="em-section">
+                <div class="em-sec-header">
+                    <h2>Emergency Response Protocol</h2>
+                    <p>Follow these steps to handle medical emergencies effectively</p>
+                </div>
+                
+                <div class="em-protocol-box">
+                    <div class="em-protocol-grid">
+                        <!-- Step 1 -->
+                        <div class="em-step-card">
+                            <div class="step-icon bg-blue-light"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="step-content">
+                                <span class="step-badge badge-blue">Step 1</span>
+                                <h4>Stay Calm and Assess</h4>
+                                <p>Take a deep breath. Quickly assess the situation and ensure your own safety first.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="em-step-card">
+                            <div class="step-icon bg-red-light"><i class="fa-solid fa-phone-volume"></i></div>
+                            <div class="step-content">
+                                <span class="step-badge badge-red">Step 2</span>
+                                <h4>Call Emergency Services</h4>
+                                <p>Dial 999 for immediate help. Provide clear location and nature of emergency.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="em-step-card">
+                            <div class="step-icon bg-green-light"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <div class="step-content">
+                                <span class="step-badge badge-green">Step 3</span>
+                                <h4>Provide First Aid</h4>
+                                <p>If trained, provide basic first aid. Do not move the patient unless necessary.</p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="em-step-card">
+                            <div class="step-icon bg-purple-light"><i class="fa-solid fa-hospital"></i></div>
+                            <div class="step-content">
+                                <span class="step-badge badge-purple">Step 4</span>
+                                <h4>Contact Nearest Hospital</h4>
+                                <p>Call the nearest hospital from the list below to alert them of incoming emergency.</p>
+                            </div>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="em-step-card">
+                            <div class="step-icon bg-orange-light"><i class="fa-regular fa-clock"></i></div>
+                            <div class="step-content">
+                                <span class="step-badge badge-orange">Step 5</span>
+                                <h4>Document Everything</h4>
+                                <p>Note down time, symptoms, actions taken. This information is crucial for medical staff.</p>
+                            </div>
+                        </div>
+                        <!-- Step 6 -->
+                        <div class="em-step-card">
+                            <div class="step-icon bg-yellow-light"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div class="step-content">
+                                <span class="step-badge badge-yellow">Step 6</span>
+                                <h4>Follow Up</h4>
+                                <p>After emergency is handled, ensure proper documentation and follow-up care is arranged.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Nearest Hospitals -->
+            <section class="em-section" style="padding-bottom: 50px;">
+                <div class="em-sec-header">
+                    <h2>Nearest Hospitals</h2>
+                    <p>Contact these hospitals for emergency medical assistance</p>
+                </div>
+
+                <div class="em-hospital-grid">
+                    
+                    <!-- Hospital 1 -->
+                    <div class="em-hosp-card">
+                        <div class="hosp-top">
+                            <div class="hosp-top-left">
+                                <div class="hosp-icon bg-blue-light"><i class="fa-regular fa-hospital"></i></div>
+                                <div>
+                                    <h4>United Hospital</h4>
+                                    <span class="hosp-247"><i class="fa-regular fa-clock"></i> 24/7 Available</span>
+                                </div>
+                            </div>
+                            <span class="hosp-distance">2.5 km</span>
+                        </div>
+                        <div class="hosp-location">
+                            <i class="fa-solid fa-location-dot"></i> Plot 15, Road 71, Gulshan-2, Dhaka 1212
+                        </div>
+                        <div class="hosp-phones">
+                            <span class="phone-tag-green"><i class="fa-solid fa-phone"></i> 09666 710 110</span>
+                            <span class="phone-tag-red"><i class="fa-solid fa-truck-medical"></i> 09666 710 510</span>
+                        </div>
+                        <div class="hosp-specialties">
+                            <small>Available Specialties:</small>
+                            <div class="spec-tags">
+                                <span>Cardiology</span><span>Neurology</span><span>Trauma Care</span>
+                            </div>
+                        </div>
+                        <div class="hosp-actions">
+                            <button class="btn-call-hosp">Call Hospital</button>
+                            <button class="btn-call-amb"><i class="fa-solid fa-truck-medical"></i> Ambulance</button>
+                        </div>
+                    </div>
+
+                    <!-- Hospital 2 -->
+                    <div class="em-hosp-card">
+                        <div class="hosp-top">
+                            <div class="hosp-top-left">
+                                <div class="hosp-icon bg-blue-light"><i class="fa-regular fa-hospital"></i></div>
+                                <div>
+                                    <h4>Apollo Hospitals Dhaka</h4>
+                                    <span class="hosp-247"><i class="fa-regular fa-clock"></i> 24/7 Available</span>
+                                </div>
+                            </div>
+                            <span class="hosp-distance">3.8 km</span>
+                        </div>
+                        <div class="hosp-location">
+                            <i class="fa-solid fa-location-dot"></i> Plot 81, Block E, Bashundhara R/A, Dhaka 1229
+                        </div>
+                        <div class="hosp-phones">
+                            <span class="phone-tag-green"><i class="fa-solid fa-phone"></i> 09610 123 456</span>
+                            <span class="phone-tag-red"><i class="fa-solid fa-truck-medical"></i> 10678</span>
+                        </div>
+                        <div class="hosp-specialties">
+                            <small>Available Specialties:</small>
+                            <div class="spec-tags">
+                                <span>Emergency Medicine</span><span>ICU</span><span>Surgery</span>
+                            </div>
+                        </div>
+                        <div class="hosp-actions">
+                            <button class="btn-call-hosp">Call Hospital</button>
+                            <button class="btn-call-amb"><i class="fa-solid fa-truck-medical"></i> Ambulance</button>
+                        </div>
+                    </div>
+
+                    <!-- Hospital 3 -->
+                    <div class="em-hosp-card">
+                        <div class="hosp-top">
+                            <div class="hosp-top-left">
+                                <div class="hosp-icon bg-blue-light"><i class="fa-regular fa-hospital"></i></div>
+                                <div>
+                                    <h4>Madani Hospital</h4>
+                                    <span class="hosp-247"><i class="fa-regular fa-clock"></i> 24/7 Available</span>
+                                </div>
+                            </div>
+                            <span class="hosp-distance">4.2 km</span>
+                        </div>
+                        <div class="hosp-location">
+                            <i class="fa-solid fa-location-dot"></i> House 14, Road 2, Dhanmondi, Dhaka 1205
+                        </div>
+                        <div class="hosp-phones">
+                            <span class="phone-tag-green"><i class="fa-solid fa-phone"></i> 02 9665620</span>
+                            <span class="phone-tag-red"><i class="fa-solid fa-truck-medical"></i> 01730 036 699</span>
+                        </div>
+                        <div class="hosp-specialties">
+                            <small>Available Specialties:</small>
+                            <div class="spec-tags">
+                                <span>General Medicine</span><span>Psychiatry</span><span>Emergency Care</span>
+                            </div>
+                        </div>
+                        <div class="hosp-actions">
+                            <button class="btn-call-hosp">Call Hospital</button>
+                            <button class="btn-call-amb"><i class="fa-solid fa-truck-medical"></i> Ambulance</button>
+                        </div>
+                    </div>
+
+                    <!-- Hospital 4 -->
+                    <div class="em-hosp-card">
+                        <div class="hosp-top">
+                            <div class="hosp-top-left">
+                                <div class="hosp-icon bg-blue-light"><i class="fa-regular fa-hospital"></i></div>
+                                <div>
+                                    <h4>Forazi Hospital</h4>
+                                    <span class="hosp-247"><i class="fa-regular fa-clock"></i> 24/7 Available</span>
+                                </div>
+                            </div>
+                            <span class="hosp-distance">5.1 km</span>
+                        </div>
+                        <div class="hosp-location">
+                            <i class="fa-solid fa-location-dot"></i> House 58, Road 16, Sector 4, Uttara, Dhaka 1230
+                        </div>
+                        <div class="hosp-phones">
+                            <span class="phone-tag-green"><i class="fa-solid fa-phone"></i> 02 48953424</span>
+                            <span class="phone-tag-red"><i class="fa-solid fa-truck-medical"></i> 01711 456 789</span>
+                        </div>
+                        <div class="hosp-specialties">
+                            <small>Available Specialties:</small>
+                            <div class="spec-tags">
+                                <span>Mental Health</span><span>General Medicine</span><span>Emergency</span>
+                            </div>
+                        </div>
+                        <div class="hosp-actions">
+                            <button class="btn-call-hosp">Call Hospital</button>
+                            <button class="btn-call-amb"><i class="fa-solid fa-truck-medical"></i> Ambulance</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ==========================================
+         CHAT SUPPORT MODAL (POPUP)
+         ========================================== -->
+    <div class="modal-overlay" id="chatModal">
+        <div class="modal-box chat-modal-box">
+            
+            <!-- Header -->
+            <div class="modal-header chat-header">
+                <div>
+                    <h2 style="display: flex; align-items: center; gap: 10px; font-size: 1.3rem; margin-bottom: 5px;">
+                        <i class="fa-regular fa-message" style="color: var(--teal);"></i> Chat with Healthcare Support
+                    </h2>
+                    <p style="font-size: 0.9rem;">Our support team is here to help you with any questions or concerns you may have.</p>
+                </div>
+                <button class="btn-close-modal" onclick="closeChatModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- Chat Body -->
+            <div class="chat-body">
+                
+                <!-- Message 1 -->
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            Hello Fatema! Welcome to Healthcare Pro. How can I assist you today?
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+
+                <!-- Message 2 -->
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            You can ask me about:<br>
+                            &bull; Booking appointments<br>
+                            &bull; Viewing prescriptions<br>
+                            &bull; Emergency services<br>
+                            &bull; Health center information<br>
+                            &bull; Doctor availability
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Chat Footer (Input) -->
+            <div class="chat-footer">
+                <div class="chat-input-wrapper">
+                    <input type="text" placeholder="Type your message...">
+                    <button class="btn-mic"><i class="fa-solid fa-microphone"></i></button>
+                </div>
+                <button class="btn-send-chat" onclick="alert('Message Sent!'); closeChatModal();"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+            <div class="chat-footer-hint">
+                Press Enter to send &bull; Click mic icon for voice input
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Chat Modal Open/Close -->
+    <script>
+        function openChatModal(event) {
+            if(event) event.preventDefault(); // Prevents page jumping to top
+            document.getElementById('chatModal').classList.add('active');
+        }
+        function closeChatModal() {
+            document.getElementById('chatModal').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>

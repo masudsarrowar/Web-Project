@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Healthcare Pro</title>
+    <!-- Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-dashboard-page student-dashboard-page">
+
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-box-teal"><i class="fa-solid fa-heart"></i></div>
+                    <div class="logo-text-admin">
+                        <strong>Healthcare Pro</strong>
+                        <span>Student Portal</span>
+                    </div>
+                </div>
+
+                <nav class="side-nav">
+    <div class="nav-section">
+        <span class="section-label">MAIN</span>
+        <a href="sDashboard.html" class="side-link"><i class="fa-solid fa-table-cells-large"></i> Dashboard</a>
+        <a href="sPrescriptions.html" class="side-link"><i class="fa-solid fa-file-lines"></i> Prescriptions</a>
+        <a href="sEmergency.html" class="side-link"><i class="fa-solid fa-circle-exclamation"></i> Emergency</a>
+        <a href="sFaq.html" class="side-link active"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+    </div>
+</nav>
+            </div>
+
+            <div class="sidebar-bottom">
+               <a href="#" class="side-link" style="margin-bottom: 20px;" onclick="openChatModal(event)"><i class="fa-regular fa-comment-dots"></i> Chat Support</a>
+                <a href="sProfile.html" class="admin-profile-box" style="text-decoration: none; color: inherit; display: flex; padding: 10px; border-radius: 10px; background: transparent; transition: 0.3s;">
+                    <div class="profile-img bg-teal-solid">FA</div>
+                    <div class="profile-txt">
+                        <strong>Fatema Ahmed</strong>
+                        <span>Student</span>
+                    </div>
+                </a>
+                <a href="landing.html" class="exit-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- Page Header -->
+            <header class="dash-header s-page-header faq-header-wrap">
+                <!-- Header Left -->
+                <div class="faq-header-left">
+                    <a href="sDashboard.html" class="back-arrow-link"><i class="fa-solid fa-arrow-left"></i></a>
+                    <h1>FAQ</h1>
+                </div>
+
+                <!-- Header Right (Ask Question Btn + Notification Bell) -->
+                <div class="header-right" style="display: flex; align-items: center; gap: 20px; position: relative;">
+                    
+                    <!-- Ask Question Button -->
+                    <button class="btn-teal-fill" style="padding: 10px 20px; font-size: 0.9rem;" onclick="openAskModal()"><i class="fa-solid fa-plus"></i> Ask Question</button>
+
+                    <!-- Hidden Checkbox for Click Toggle -->
+                    <input type="checkbox" id="notif-toggle" class="notif-toggle-checkbox">
+                    
+                    <!-- Bell Icon Label (Acts as the button) -->
+                    <label for="notif-toggle" class="notif-box">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notif-count">3</span>
+                    </label>
+
+                    <!-- NOTIFICATION DROPDOWN POPUP -->
+                    <div class="notif-dropdown">
+                        <div class="notif-drop-header">
+                            <div>
+                                <h4>Notifications</h4>
+                                <span>3 unread</span>
+                            </div>
+                            <button class="btn-mark-read">Mark all read</button>
+                        </div>
+                        
+                        <div class="notif-drop-body">
+                            <!-- Notification Item 1 -->
+                            <div class="notif-item">
+                                <div class="notif-icon bg-blue-light"><i class="fa-regular fa-user"></i></div>
+                                <div class="notif-content">
+                                    <h5>New Doctor Registration</h5>
+                                    <p>Dr. Mahbub Rahman has registered and awaits approval</p>
+                                    <span class="notif-time">5 min ago <span class="unread-dot"></span></span>
+                                </div>
+                            </div>
+
+                            <!-- Notification Item 2 -->
+                            <div class="notif-item">
+                                <div class="notif-icon bg-purple-light"><i class="fa-solid fa-user-group"></i></div>
+                                <div class="notif-content">
+                                    <h5>Pending Patient Approval</h5>
+                                    <p>Fatima Begum (ID: 11201456) requires approval</p>
+                                    <span class="notif-time">12 min ago <span class="unread-dot"></span></span>
+                                </div>
+                            </div>
+
+                            <!-- Notification Item 3 -->
+                            <div class="notif-item">
+                                <div class="notif-icon bg-green-light"><i class="fa-solid fa-wallet"></i></div>
+                                <div class="notif-content">
+                                    <h5>Payment Received</h5>
+                                    <p>Payment of ৳500 received from Kamal Uddin</p>
+                                    <span class="notif-time">25 min ago <span class="unread-dot"></span></span>
+                                </div>
+                            </div>
+
+                            <!-- Notification Item 4 -->
+                            <div class="notif-item" style="border-bottom: none;">
+                                <div class="notif-icon bg-orange-light"><i class="fa-regular fa-calendar-check"></i></div>
+                                <div class="notif-content">
+                                    <h5>New Appointment</h5>
+                                    <p>Sadia Rahman scheduled with Dr. Arif Rahman at 3:30 PM</p>
+                                    <span class="notif-time">1 hour ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="notif-drop-footer">
+                            <a href="#">View all notifications</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main FAQ Box -->
+            <section class="faq-main-box">
+                
+                <!-- Intro -->
+                <div class="faq-intro">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find answers to common questions about using the healthcare system</p>
+                </div>
+
+                <!-- Accordion List -->
+                <div class="faq-accordion-container">
+                    
+                    <details>
+                        <summary>How do I schedule an appointment? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            You can easily schedule an appointment by navigating to the Dashboard and clicking on the "Request Appointment" button. Fill in the required details and confirm.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>What services does Healthcare Pro offer? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            We offer general physician consultations, mental health counseling, emergency response, and digital prescription tracking for all university students.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Are consultations confidential? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            Yes, absolutely. All your medical records, visit history, and consultation details are kept strictly confidential and secure within our system.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>What are the consultation fees? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            Standard consultations for enrolled university students are completely free of charge. Specialized treatments or external tests may incur separate costs.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>How can I access my medical records? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            You can access all your past prescriptions and medical visit history by navigating to the "Prescriptions" or "My Profile" tab from the sidebar.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>What should I do in case of emergency? <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="faq-answer">
+                            Please visit the "Emergency" tab immediately. You will find national hotlines, ambulance contacts, and the nearest hospitals along with their direct contact numbers.
+                        </div>
+                    </details>
+
+                </div>
+
+                <!-- Contact Support Box -->
+                <div class="faq-contact-box">
+                    <h3>Still have questions?</h3>
+                    <p>If you couldn't find the answer you're looking for, please contact our support team.</p>
+                    
+                    <div class="faq-contact-info">
+                        <div><strong>Email:</strong> <a href="mailto:healthcenter@uiu.ac.bd">healthcenter@uiu.ac.bd</a></div>
+                        <div><strong>Phone:</strong> <a href="tel:+8801700000000">+880 1700 000 000</a></div>
+                        <div><strong>Hours:</strong> Sunday - Thursday, 9:00 AM - 5:00 PM</div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+
+    <!-- ==========================================
+         ASK QUESTION MODAL (POPUP FORM)
+         ========================================== -->
+    <div class="modal-overlay" id="askModal">
+        <div class="modal-box" style="max-width: 550px;">
+            
+            <!-- Header -->
+            <div class="modal-header">
+                <div>
+                    <h2 style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-regular fa-message" style="color: var(--teal);"></i> Ask a Question
+                    </h2>
+                    <p style="margin-top: 5px;">Submit your question and our healthcare team will provide an answer soon.</p>
+                </div>
+                <button class="btn-close-modal" onclick="closeAskModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- Form -->
+            <form class="modal-form" onsubmit="event.preventDefault(); alert('Your question has been submitted successfully!'); closeAskModal();">
+                
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label>Your Question</label>
+                    <textarea rows="5" placeholder="Type your healthcare related question here..." required></textarea>
+                </div>
+
+                <!-- Blue Info Note -->
+                <div class="info-note-box">
+                    <strong>Note:</strong> Your question will be reviewed and answered by our healthcare professionals. You'll be notified once an answer is available.
+                </div>
+
+                <!-- Footer Buttons -->
+                <div class="modal-footer" style="margin-top: 25px;">
+                    <button type="button" class="btn-modal-cancel" onclick="closeAskModal()">Cancel</button>
+                    <button type="submit" class="btn-modal-submit">Submit Question</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         CHAT SUPPORT MODAL (POPUP)
+         ========================================== -->
+    <div class="modal-overlay" id="chatModal">
+        <div class="modal-box chat-modal-box">
+            
+            <!-- Header -->
+            <div class="modal-header chat-header">
+                <div>
+                    <h2 style="display: flex; align-items: center; gap: 10px; font-size: 1.3rem; margin-bottom: 5px;">
+                        <i class="fa-regular fa-message" style="color: var(--teal);"></i> Chat with Healthcare Support
+                    </h2>
+                    <p style="font-size: 0.9rem;">Our support team is here to help you with any questions or concerns you may have.</p>
+                </div>
+                <button class="btn-close-modal" onclick="closeChatModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- Chat Body -->
+            <div class="chat-body">
+                
+                <!-- Message 1 -->
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            Hello Fatema! Welcome to Healthcare Pro. How can I assist you today?
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+
+                <!-- Message 2 -->
+                <div class="chat-message">
+                    <div class="chat-avatar bg-teal-solid"><i class="fa-regular fa-message"></i></div>
+                    <div class="chat-bubble-wrap">
+                        <span class="chat-sender-name">Healthcare Support</span>
+                        <div class="chat-bubble">
+                            You can ask me about:<br>
+                            &bull; Booking appointments<br>
+                            &bull; Viewing prescriptions<br>
+                            &bull; Emergency services<br>
+                            &bull; Health center information<br>
+                            &bull; Doctor availability
+                        </div>
+                        <span class="chat-time">06:48 PM</span>
+                    </div>
+                </div>
+ 
+            </div>
+
+            <!-- Chat Footer (Input) -->
+            <div class="chat-footer">
+                <div class="chat-input-wrapper">
+                    <input type="text" placeholder="Type your message...">
+                    <button class="btn-mic"><i class="fa-solid fa-microphone"></i></button>
+                </div>
+                <button class="btn-send-chat" onclick="alert('Message Sent!'); closeChatModal();"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+            <div class="chat-footer-hint">
+                Press Enter to send &bull; Click mic icon for voice input
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Modals Open/Close -->
+    <script>
+        function openAskModal() {
+            document.getElementById('askModal').classList.add('active');
+        }
+        function closeAskModal() {
+            document.getElementById('askModal').classList.remove('active');
+        }
+        function openChatModal(event) {
+            if(event) event.preventDefault(); // Prevents page jumping to top
+            document.getElementById('chatModal').classList.add('active');
+        }
+        function closeChatModal() {
+            document.getElementById('chatModal').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>
